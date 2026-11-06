@@ -1,0 +1,11 @@
+# Exclude poster, qr, and unneeded assets
+poster_expoandes_70x100.svg
+qr_expoandes.svg
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.xlsx
+*.py
+*.txt
+.git
