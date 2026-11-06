@@ -1,0 +1,344 @@
+[
+  {
+    "excel_row": 4,
+    "year": 1970,
+    "song": "Spanish Omega",
+    "field": "Nombre del Productor",
+    "original_value": "Hudson Keith Linberg ",
+    "audited_value": "Keith Hudson (Hudson Keith Linberg)",
+    "reason": "Keith Hudson (1946-1984), apodado \"The Dark Prince of Reggae\", pionero del dub nacido en Kingston, Jamaica. Editado en su propio sello Inbidimts Records."
+  },
+  {
+    "excel_row": 4,
+    "year": 1970,
+    "song": "Spanish Omega",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Jamaica",
+    "reason": "Keith Hudson (1946-1984), apodado \"The Dark Prince of Reggae\", pionero del dub nacido en Kingston, Jamaica. Editado en su propio sello Inbidimts Records."
+  },
+  {
+    "excel_row": 16,
+    "year": 1975,
+    "song": "Some Like It Dread",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Jamaica",
+    "reason": "Tony Robinson, productor e ingeniero de sonido jamaiquino de roots y dub, fundador de Blue Mahoe."
+  },
+  {
+    "excel_row": 17,
+    "year": 1975,
+    "song": "La Media Vuelta",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Cecilio Williams y Lloyd Gallimore fueron arreglistas y líderes del combo nacional Los Mozambiques de Colón/Panamá, grabados por Tamayo Records."
+  },
+  {
+    "excel_row": 25,
+    "year": 1978,
+    "song": "Dreadlocks the Time Is Now",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información, Jamaica",
+    "audited_value": "Jamaica",
+    "reason": "Tanto Tony Robinson como el grupo vocal The Gladiators son de Kingston, Jamaica."
+  },
+  {
+    "excel_row": 50,
+    "year": 1984,
+    "song": "Tú Hablas Mucho",
+    "field": "Nombre del Productor",
+    "original_value": "Prodim S.A",
+    "audited_value": "Grupo Cheb / Prodim S.A.",
+    "reason": "Pista del LP Treatment (1984) del Grupo Cheb (pioneros del reggae en español en Panamá), editado por la casa discográfica panameña Prodim S.A."
+  },
+  {
+    "excel_row": 50,
+    "year": 1984,
+    "song": "Tú Hablas Mucho",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Pista del LP Treatment (1984) del Grupo Cheb (pioneros del reggae en español en Panamá), editado por la casa discográfica panameña Prodim S.A."
+  },
+  {
+    "excel_row": 52,
+    "year": 1985,
+    "song": "Lo Que el Deni Puede Hacer",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Luis Phillips, productor musical panameño para Renato y Las 4 Estrellas en Pedsa Records Panamá."
+  },
+  {
+    "excel_row": 53,
+    "year": 1985,
+    "song": "Boops",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Jamaica",
+    "reason": "Kenneth \"Skengdon\" Black, legendario promotor de sound systems y productor jamaiquino (Skengdon Music Corp.), productor de Super Cat."
+  },
+  {
+    "excel_row": 60,
+    "year": 1987,
+    "song": "La Chica de los Ojos Café",
+    "field": "Nombre del Productor",
+    "original_value": "No documentado",
+    "audited_value": "Ramón \"Pucho\" Bustamante / Pedsa Records",
+    "reason": "Éxito estandarte de Renato y las 4 Estrellas, grabado y producido en Panamá por Ramón Bustamante para Pedsa Records."
+  },
+  {
+    "excel_row": 60,
+    "year": 1987,
+    "song": "La Chica de los Ojos Café",
+    "field": "Nacionalidad del Productor",
+    "original_value": "nan",
+    "audited_value": "Panamá",
+    "reason": "Éxito estandarte de Renato y las 4 Estrellas, grabado y producido en Panamá por Ramón Bustamante para Pedsa Records."
+  },
+  {
+    "excel_row": 65,
+    "year": 1989,
+    "song": "Monalisa",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Pista del álbum \"El Lover Boy\" de Chicho Man, grabado y producido en Panamá por Stanly Brian para O.M. Productions."
+  },
+  {
+    "excel_row": 67,
+    "year": 1989,
+    "song": "El mueve cucuta",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Panamá, Sin información",
+    "audited_value": "Panamá, Jamaica",
+    "reason": "Michael Ellis (panameño) y Karl Wright (reconocido baterista y productor jamaiquino radicado en Nueva York)."
+  },
+  {
+    "excel_row": 68,
+    "year": 1989,
+    "song": "Llega Navidad",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Canción de Chicho Man (álbum El Lover Boy), producida en Panamá por Stanly Brian bajo el sello O.M. Productions."
+  },
+  {
+    "excel_row": 69,
+    "year": 1989,
+    "song": "Lady red",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Producción de reggae en español panameño grabada y producida por Stanly Brian para O.M. Productions."
+  },
+  {
+    "excel_row": 76,
+    "year": 1990,
+    "song": "Pu Tun Tun",
+    "field": "Nombre del Productor",
+    "original_value": " Karl Miller",
+    "audited_value": "Karl Miller",
+    "reason": "Grabación emblemática de Chicho Man en los estudios Gold Disc en Ciudad de Panamá, producida e masterizada por el ingeniero panameño Karl Miller."
+  },
+  {
+    "excel_row": 76,
+    "year": 1990,
+    "song": "Pu Tun Tun",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Grabación emblemática de Chicho Man en los estudios Gold Disc en Ciudad de Panamá, producida e masterizada por el ingeniero panameño Karl Miller."
+  },
+  {
+    "excel_row": 77,
+    "year": 1990,
+    "song": "Rikers Island",
+    "field": "Nombre del Productor",
+    "original_value": "nan",
+    "audited_value": "Henry \"Junjo\" Lawes",
+    "reason": "Clásico de dancehall de Cocoa Tea y Nardo Ranks, producido por Henry \"Junjo\" Lawes para el sello Greensleeves."
+  },
+  {
+    "excel_row": 77,
+    "year": 1990,
+    "song": "Rikers Island",
+    "field": "Nacionalidad del Productor",
+    "original_value": "nan",
+    "audited_value": "Jamaica",
+    "reason": "Clásico de dancehall de Cocoa Tea y Nardo Ranks, producido por Henry \"Junjo\" Lawes para el sello Greensleeves."
+  },
+  {
+    "excel_row": 79,
+    "year": 1990,
+    "song": "Todo el mundo",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "República Dominicana, Estados Unidos",
+    "reason": "Grabación de Proyecto Uno producida por Nelson Zapata y Pavel de Jesús (Manybeat), pioneros dominicanos del merenhouse y rap latino en Nueva York."
+  },
+  {
+    "excel_row": 86,
+    "year": 1991,
+    "song": "Trailer lleno de guiales",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Panamá",
+    "reason": "Producido por el ejecutivo y productor panameño Jaime Davidson para Gringo el Original en el sello Shelly's Records."
+  },
+  {
+    "excel_row": 105,
+    "year": 1995,
+    "song": "Rica y Apretadita",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Jamaica",
+    "reason": "Dennis Halliburton, destacado ingeniero y productor jamaiquino de Dynamic Sounds y BMG, productor del tema de El General y Anayka."
+  },
+  {
+    "excel_row": 114,
+    "year": 1996,
+    "song": "Tengo una Punto 40 Remix",
+    "field": "Nombre del Productor",
+    "original_value": "Derechos Reservados",
+    "audited_value": "DJ Playero & DJ Eric",
+    "reason": "Tema de Baby Rasta & Gringo editado por BM Records & Latin Music en San Juan, coproducido por DJ Playero y DJ Eric."
+  },
+  {
+    "excel_row": 114,
+    "year": 1996,
+    "song": "Tengo una Punto 40 Remix",
+    "field": "Nacionalidad del Productor",
+    "original_value": "nan",
+    "audited_value": "Puerto Rico",
+    "reason": "Tema de Baby Rasta & Gringo editado por BM Records & Latin Music en San Juan, coproducido por DJ Playero y DJ Eric."
+  },
+  {
+    "excel_row": 115,
+    "year": 1997,
+    "song": "Posición",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Puerto Rico",
+    "reason": "Flavio \"DJ Goldy\", productor puertorriqueño pionero de la serie Guatauba y El Cartel junto a Daddy Yankee."
+  },
+  {
+    "excel_row": 119,
+    "year": 1997,
+    "song": "Boricua Guerrero / The Prophecy",
+    "field": "Nombre del Productor",
+    "original_value": "Dr. Butcher",
+    "audited_value": "Dr. Butcher & Nico Canada",
+    "reason": "Álbum conceptual producido por Dr. Butcher (Nueva York) y Nico Canada (Puerto Rico) que fusionó raperos de EE.UU. con artistas boricuas."
+  },
+  {
+    "excel_row": 119,
+    "year": 1997,
+    "song": "Boricua Guerrero / The Prophecy",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Estados Unidos, Puerto Rico",
+    "reason": "Álbum conceptual producido por Dr. Butcher (Nueva York) y Nico Canada (Puerto Rico) que fusionó raperos de EE.UU. con artistas boricuas."
+  },
+  {
+    "excel_row": 128,
+    "year": 1999,
+    "song": "Tra Tra Tra Remix",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Puerto Rico",
+    "reason": "DJ Fat Tony y Rafael Pineda (Raphy Pina), productores puertorriqueños en San Juan bajo Pina Records."
+  },
+  {
+    "excel_row": 133,
+    "year": 2003,
+    "song": "Dem Time Done",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Puerto Rico",
+    "reason": "DJ Dicky (Richard E. Colón), pionero puertorriqueño del underground (No Fear) produciendo bajo Pina Records."
+  },
+  {
+    "excel_row": 144,
+    "year": 2011,
+    "song": "Sin miedo",
+    "field": "Nombre del Productor",
+    "original_value": "Chez Tom ",
+    "audited_value": "Chez Tom",
+    "reason": "Tomás Eloy Botero (\"Chez Tom\"), productor colombiano de Medellín clave en el despegue urbano de Warner Music Latina."
+  },
+  {
+    "excel_row": 144,
+    "year": 2011,
+    "song": "Sin miedo",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Colombia",
+    "reason": "Tomás Eloy Botero (\"Chez Tom\"), productor colombiano de Medellín clave en el despegue urbano de Warner Music Latina."
+  },
+  {
+    "excel_row": 157,
+    "year": 2019,
+    "song": "Inocente",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Puerto Rico",
+    "reason": "Alberto Lozada (\"Montana The Producer\"), reconocido productor urbano puertorriqueño."
+  },
+  {
+    "excel_row": 165,
+    "year": 2024,
+    "song": "Passoa",
+    "field": "Nombre del Productor",
+    "original_value": "Smash david ",
+    "audited_value": "Smash David",
+    "reason": "David Shayman (\"Smash David\"), productor musical y beatmaker estadounidense radicado en Florida."
+  },
+  {
+    "excel_row": 165,
+    "year": 2024,
+    "song": "Passoa",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Estados Unidos",
+    "reason": "David Shayman (\"Smash David\"), productor musical y beatmaker estadounidense radicado en Florida."
+  },
+  {
+    "excel_row": 166,
+    "year": 2026,
+    "song": "A",
+    "field": "Integridad del Registro",
+    "original_value": "Prod: 0 | Nat: A",
+    "audited_value": "Anotación de Auditoría",
+    "reason": "Fila anómala de prueba técnica de clase. Se conserva para auditoría e integridad de registros originales."
+  },
+  {
+    "excel_row": 168,
+    "year": 2026,
+    "song": "Prueba en clase Paola",
+    "field": "Integridad del Registro",
+    "original_value": "Prod: Prueba en clase Paola | Nat: nan",
+    "audited_value": "Anotación de Auditoría",
+    "reason": "Fila de prueba escolar o de taller (\"Prueba en clase Paola\"). Se conserva identificada para auditoría."
+  },
+  {
+    "excel_row": 169,
+    "year": 2026,
+    "song": "Wo Oh Oh",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Puerto Rico, Sin información",
+    "audited_value": "Puerto Rico",
+    "reason": "BASSYY, KARBEATZ y Culprit son productores puertorriqueños vinculados a Rimas Entertainment."
+  },
+  {
+    "excel_row": 170,
+    "year": 2026,
+    "song": "Ojos Brujos",
+    "field": "Nacionalidad del Productor",
+    "original_value": "Sin información",
+    "audited_value": "Puerto Rico",
+    "reason": "Turbo, productor discográfico puertorriqueño de música urbana."
+  }
+]

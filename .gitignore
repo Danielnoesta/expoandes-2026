@@ -1,0 +1,20 @@
+# Poster and QR (as requested: do not push to git)
+poster_expoandes_70x100.svg
+qr_expoandes.svg
+
+# Build, test, and render scripts
+*.py
+*.txt
+
+# Rendered screenshots & archives
+*.png
+*.jpg
+*.jpeg
+*.zip
+*.xlsx
+
+# Deploy & environment
+.vercel
+node_modules/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth bg-[#08090C]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Diáspora de los Productores del Reguetón (1970–1999) | Monografía de Archivo</title>
+  
+  <!-- Typography: Syne (Display), Plus Jakarta Sans (Editorial Text), Space Mono (Archive & Metrics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- D3.js v7 CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#08090C',
+              surface: '#0F1117',
+              border: '#1F2433',
+              subtle: '#141824',
+              gold: '#E5A93C',
+              cobalt: '#3B82F6',
+              terracotta: '#E05A47',
+              purple: '#8B5CF6',
+              teal: '#0D9488',
+              slate: '#94A3B8'
+            }
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            mono: ['"Space Mono"', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #08090C;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Architectural 1px grid borders */
+    .grid-border-r { border-right: 1px solid #1F2433; }
+    .grid-border-b { border-bottom: 1px solid #1F2433; }
+    .grid-border-t { border-top: 1px solid #1F2433; }
+    .grid-border-l { border-left: 1px solid #1F2433; }
+
+    /* Custom technical scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #08090C; }
+    ::-webkit-scrollbar-thumb { background: #262B3A; }
+    ::-webkit-scrollbar-thumb:hover { background: #40485E; }
+  </style>
+</head>
+<body class="bg-[#08090C] text-neutral-200 antialiased selection:bg-amber-400 selection:text-black">
+
+  <!-- TOP EDITORIAL HEADER & COLOPHON -->
+  <header class="border-b border-neutral-800 bg-[#08090C]/95 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between text-xs font-mono">
+      <div class="flex items-center space-x-3">
+        <span class="text-neutral-500 font-bold">EXPOANDES · 2026</span>
+        <span class="text-neutral-700">/</span>
+        <span class="text-neutral-300 font-medium hidden md:inline">INVESTIGACIÓN ETNOMUSICOLÓGICA (1970–1999)</span>
+      </div>
+      
+      <nav class="flex items-center space-x-5">
+        <a href="#streamgraph-section" class="text-neutral-400 hover:text-white transition">01. Cuotas</a>
+        <a href="#bump-section" class="text-neutral-400 hover:text-white transition">02. Jerarquías</a>
+        <a href="#beeswarm-section" class="text-neutral-400 hover:text-white transition">03. Archivo 126</a>
+        <span class="text-neutral-700">/</span>
+        <span class="px-2.5 py-1 text-black bg-amber-400 font-bold flex items-center space-x-1 cursor-default">
+          <span>EXPOANDES 2026</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ASYMMETRIC EDITORIAL HERO OPENING -->
+  <section class="border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+        
+        <!-- Left Column (8 cols): Title, Thesis & Scope -->
+        <div class="lg:col-span-8 space-y-8">
+          <div class="space-y-3">
+            <span class="text-[11px] font-mono tracking-widest text-amber-500 font-bold uppercase block">
+              MONOGRAFÍA DE ARCHIVO SONORO · CORPUS 1970—1999
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-syne font-extrabold text-white tracking-tight leading-[1.02]">
+              LA DIÁSPORA DE LOS PRODUCTORES DEL REGUETÓN
+            </h1>
+          </div>
+          
+          <p class="text-base sm:text-lg text-neutral-300 leading-relaxed font-sans max-w-2xl">
+            Genealogía y cartografía de la producción musical caribeña: cómo la artesanía de los sound systems en <strong class="text-white">Kingston</strong> y la traducción léxica en <strong class="text-white">Panamá</strong> fueron asimiladas por el movimiento subterráneo de <strong class="text-white">Puerto Rico</strong> para fundar la hegemonía urbana global.
+          </p>
+
+          <!-- Methodological Scope Card (Minimalist Archival Box) -->
+          <div class="border-l-2 border-amber-500 bg-neutral-900/60 p-4 sm:p-5 border-y border-r border-neutral-800/80">
+            <div class="flex items-baseline space-x-2 mb-1.5 font-mono text-xs">
+              <span class="text-amber-400 font-bold">ALCANCE Y NOTA METODOLÓGICA</span>
+              <span class="text-neutral-600">·</span>
+              <span class="text-neutral-400">CORPUS N = 126</span>
+            </div>
+            <p class="text-xs text-neutral-300 leading-relaxed font-sans">
+              Muestra exhaustivamente auditada de 126 grabaciones formativas (1970–1999) con verificación estricta de nacionalidad de productores, sellos fonográficos y compases rítmicos. Mapea la trayectoria técnica y estilística hacia el canon del reguetón; no constituye un censo comercial absoluto.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column (4 cols): Exposed Archival Spec Sheet (No puffy cards) -->
+        <div class="lg:col-span-4 border border-neutral-800 divide-y divide-neutral-800 bg-[#0B0D12]">
+          <div class="p-4 bg-neutral-900/70 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-neutral-400 uppercase tracking-widest">SÍNTESIS POR DECENIOS</span>
+            <span class="text-[10px] font-mono text-amber-400 font-bold">3 DÉCADAS</span>
+          </div>
+
+          <!-- Decade 1 -->
+          <div class="p-5 space-y-1 hover:bg-neutral-900/30 transition">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs font-mono text-neutral-400">AÑOS 70 · MATRIZ JAMAIQUINA</span>
+              <span class="text-2xl font-mono font-bold text-amber-400">66.7%</span>
+            </div>
+            <p class="text-xs text-neutral-400">Roots, Dub y Toasting (U-Roy, Jimmy Cliff, Duke Reid, Lee Perry).</p>
+          </div>
+
+          <!-- Decade 2 -->
+          <div class="p-5 space-y-1 hover:bg-neutral-900/30 transition">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs font-mono text-neutral-400">AÑOS 80 · PUENTE PANAMEÑO</span>
+              <span class="text-2xl font-mono font-bold text-[#E05A47]">20.0%</span>
+            </div>
+            <p class="text-xs text-neutral-400">Traducción al castellano del dancehall (Renato, Pedsa Records, Chicho Man).</p>
+          </div>
+
+          <!-- Decade 3 -->
+          <div class="p-5 space-y-1 hover:bg-neutral-900/30 transition">
+            <div class="flex items-baseline justify-between">
+              <span class="text-xs font-mono text-neutral-400">AÑOS 90 · IMPERIO BORICUA</span>
+              <span class="text-2xl font-mono font-bold text-[#3B82F6]">57.9%</span>
+            </div>
+            <p class="text-xs text-neutral-400">Auge del Underground en San Juan (DJ Playero, DJ Negro, DJ Nelson, DJ Eric).</p>
+          </div>
+
+          <!-- Total Archive -->
+          <div class="p-4 bg-neutral-900/40 flex items-center justify-between text-xs font-mono">
+            <span class="text-neutral-400">REGISTROS AUDITADOS:</span>
+            <span class="text-white font-bold">126 OBRAS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: STREAMGRAPH OF MARKET SHARE -->
+  <section id="streamgraph-section" class="border-b border-neutral-800 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    
+    <!-- Section Title & Narrative -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
+      <div class="max-w-2xl space-y-2">
+        <div class="flex items-center space-x-2 font-mono text-xs text-amber-500 font-bold uppercase tracking-wider">
+          <span>01 / DINÁMICA TEMPORAL</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white tracking-tight">
+          Evolución de la Cuota de Participación Temporal
+        </h2>
+        <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed">
+          Distingue entre el <strong class="text-white">flujo puntual de lanzamientos anuales</strong> y la <strong class="text-amber-400">inercia acumulativa del catálogo</strong> (1970–1999). Cambia el modo de cálculo entre cuota anual, cuota acumulada o volumen absoluto.
+        </p>
+      </div>
+
+      <!-- Controls: Toggle & Minimal Legend -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <!-- Display Mode Toggle -->
+        <div class="flex items-center border border-neutral-800 bg-[#0B0D12] p-1">
+          <button id="mode-pct-btn" onclick="setStreamMode('pct')" class="px-3.5 py-1.5 text-xs font-mono font-bold bg-neutral-100 text-black border border-neutral-100 transition">
+            % Flujo Anual
+          </button>
+          <button id="mode-cum-btn" onclick="setStreamMode('cum')" class="px-3.5 py-1.5 text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition">
+            % Acumulado Histórico
+          </button>
+          <button id="mode-count-btn" onclick="setStreamMode('count')" class="px-3.5 py-1.5 text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition">
+            Volumen (Barras)
+          </button>
+        </div>
+
+        <!-- Legend Pills -->
+        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+          <span class="inline-flex items-center px-2 py-1 border border-neutral-800 bg-neutral-900 text-neutral-300">
+            <span class="w-2 h-2 mr-1.5 bg-[#E5A93C]"></span> Jamaica
+          </span>
+          <span class="inline-flex items-center px-2 py-1 border border-neutral-800 bg-neutral-900 text-neutral-300">
+            <span class="w-2 h-2 mr-1.5 bg-[#3B82F6]"></span> Puerto Rico
+          </span>
+          <span class="inline-flex items-center px-2 py-1 border border-neutral-800 bg-neutral-900 text-neutral-300">
+            <span class="w-2 h-2 mr-1.5 bg-[#E05A47]"></span> Panamá
+          </span>
+          <span class="inline-flex items-center px-2 py-1 border border-neutral-800 bg-neutral-900 text-neutral-300">
+            <span class="w-2 h-2 mr-1.5 bg-[#8B5CF6]"></span> UK
+          </span>
+          <span class="inline-flex items-center px-2 py-1 border border-neutral-800 bg-neutral-900 text-neutral-300">
+            <span class="w-2 h-2 mr-1.5 bg-[#0D9488]"></span> EE.UU.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Year Inspector HUD (Clean Technical Console) -->
+    <div id="stream-inspector-hud" class="mb-6 border border-neutral-800 bg-[#0B0D12] p-4 text-xs font-mono">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-neutral-800">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="text-neutral-500 font-bold uppercase tracking-wider text-[11px]">AÑO INSPECCIONADO:</span>
+          <span id="hud-year" class="text-sm font-bold text-black bg-neutral-100 px-2.5 py-0.5">1985</span>
+          <span id="hud-total-annual" class="text-amber-400 font-bold border border-amber-500/30 bg-amber-500/10 px-2 py-0.5">6 canciones ese año</span>
+          <span id="hud-sample-warning" class="hidden text-amber-400 bg-amber-400/10 border border-amber-400/30 px-2 py-0.5 text-[11px] items-center space-x-1">
+            <span>⚠</span> <span>Muestra puntual reducida: Alta varianza</span>
+          </span>
+          <span class="text-neutral-600 hidden sm:inline">|</span>
+          <span id="hud-total-cum" class="text-neutral-300 border border-neutral-800 bg-neutral-900 px-2 py-0.5">54 acumuladas (1970 → 1985)</span>
+        </div>
+        <div class="text-[11px] text-neutral-400 font-sans">
+          Pasa el cursor sobre el gráfico para comparar <strong>Flujo puntual vs. Acumulado histórico</strong>
+        </div>
+      </div>
+
+      <!-- Dual Comparison Grid -->
+      <div class="mt-3 grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <!-- Annual Flow Column -->
+        <div class="border border-neutral-850 p-3 bg-neutral-950/60">
+          <div class="flex items-center justify-between mb-2 pb-1 border-b border-neutral-850">
+            <span class="text-[11px] uppercase font-bold text-neutral-300 tracking-wider">
+              Flujo Puntual (Solo año <span id="hud-row-year-label" class="text-white font-bold">1985</span>)
+            </span>
+            <span class="text-[10px] text-neutral-500">Muestra de ese año</span>
+          </div>
+          <div id="hud-breakdown-annual" class="flex flex-wrap items-center gap-2"></div>
+        </div>
+
+        <!-- Cumulative Stock Column -->
+        <div class="border border-neutral-850 p-3 bg-neutral-950/60">
+          <div class="flex items-center justify-between mb-2 pb-1 border-b border-neutral-850">
+            <span class="text-[11px] uppercase font-bold text-amber-400 tracking-wider">
+              Catálogo Acumulado (1970 → <span id="hud-row-cum-label" class="text-white font-bold">1985</span>)
+            </span>
+            <span class="text-[10px] text-neutral-500">Inercia histórica total</span>
+          </div>
+          <div id="hud-breakdown-cum" class="flex flex-wrap items-center gap-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Canvas Frame -->
+    <div class="border border-neutral-800 bg-[#0B0D12] p-4 sm:p-6 relative">
+      <div id="streamgraph-tooltip" class="absolute hidden z-20 pointer-events-none bg-[#08090C] border border-neutral-700 p-3 text-xs font-mono shadow-2xl"></div>
+      <div id="streamgraph-chart" class="w-full overflow-x-auto"></div>
+      
+      <!-- Milestone Navigation Strip -->
+      <div class="mt-6 pt-5 border-t border-neutral-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-amber-400 text-sm">◆</span>
+            <h4 class="text-xs sm:text-sm font-mono font-bold uppercase tracking-wider text-white">Hitos de Inflexión Histórica</h4>
+          </div>
+          <span class="text-[11px] text-neutral-400 font-sans">Selecciona un hito para inspeccionar su contexto técnico:</span>
+        </div>
+
+        <!-- Buttons Strip -->
+        <div class="flex flex-wrap gap-2 mb-3">
+          <button onclick="selectMilestone(1970)" id="pill-1970" class="milestone-pill px-3 py-1.5 text-xs font-mono font-medium border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 bg-[#E5A93C]"></span>
+            <span>1970 · Toasting (U-Roy)</span>
+          </button>
+          <button onclick="selectMilestone(1982)" id="pill-1982" class="milestone-pill px-3 py-1.5 text-xs font-mono font-medium border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 bg-[#E5A93C]"></span>
+            <span>1982 · Bam Bam (Sister Nancy)</span>
+          </button>
+          <button onclick="selectMilestone(1985)" id="pill-1985" class="milestone-pill px-3 py-1.5 text-xs font-mono font-medium border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 bg-[#E5A93C]"></span>
+            <span>1985 · Sleng Teng (Casio MT-40)</span>
+          </button>
+          <button onclick="selectMilestone(1987)" id="pill-1987" class="milestone-pill px-3 py-1.5 text-xs font-mono font-medium border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 bg-[#E05A47]"></span>
+            <span>1987 · Ojos Café (Renato)</span>
+          </button>
+          <button onclick="selectMilestone(1990)" id="pill-1990" class="milestone-pill px-3 py-1.5 text-xs font-mono font-bold border border-amber-500 bg-amber-500/10 text-amber-400 transition flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 bg-[#E5A93C]"></span>
+            <span>1990 · Dem Bow (Riddim 3:2)</span>
+          </button>
+          <button onclick="selectMilestone(1992)" id="pill-1992" class="milestone-pill px-3 py-1.5 text-xs font-mono font-medium border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition flex items-center space-x-2">
+            <span class="w-1.5 h-1.5 bg-[#3B82F6]"></span>
+            <span>1992 · Playero 34 (Daddy Yankee)</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Milestone Callout Box -->
+        <div id="active-milestone-card" class="p-4 border-l-2 border-amber-400 bg-neutral-900/60 border-y border-r border-neutral-800 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs">
+          <div class="space-y-1">
+            <div class="flex items-center space-x-2 font-mono">
+              <span id="ms-badge" class="px-2 py-0.5 text-[10px] font-bold border border-amber-500/40 bg-amber-500/10 text-amber-400">1990 • JAMAICA</span>
+              <h5 id="ms-title" class="font-bold text-white text-sm">Dem Bow <span id="ms-artist" class="font-normal text-neutral-400">(Shabba Ranks / Bobby Digital)</span></h5>
+            </div>
+            <p id="ms-desc" class="text-neutral-300 leading-relaxed font-sans text-xs">
+              <strong class="text-amber-400">El ADN Rítmico del Reguetón:</strong> Bobby Digital Dixon y Steely & Clevie fijan la batería sincopada en compás 3:2 (tresillo), base rítmica sobre la cual descansa todo el género urbano contemporáneo.
+            </p>
+          </div>
+          <button onclick="focusStreamYear(1990)" class="self-start md:self-center px-3 py-1.5 border border-neutral-700 text-neutral-200 hover:text-white hover:border-amber-400 font-mono text-[11px] whitespace-nowrap transition">
+            Examinar en Gráfico ↗
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: BUMP CHART OF QUINQUENNIAL RANKINGS -->
+  <section id="bump-section" class="border-b border-neutral-800 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="mb-8 space-y-2">
+      <span class="text-[11px] font-mono font-bold text-[#3B82F6] uppercase tracking-wider block">02 / JERARQUÍAS</span>
+      <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white tracking-tight">
+        Dinámica de Jerarquías: Bump Chart (1970–1999)
+      </h2>
+      <p class="text-neutral-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
+        Seguimiento ordinal del ranking entre países a lo largo de 6 quinquenios formativos. Muestra la transferencia de hegemonía hacia Puerto Rico en la década de 1990.
+      </p>
+    </div>
+
+    <div class="border border-neutral-800 bg-[#0B0D12] p-4 sm:p-6 relative">
+      <div id="bump-tooltip" class="absolute hidden z-20 pointer-events-none bg-[#08090C] border border-neutral-700 p-3 text-xs font-mono shadow-2xl"></div>
+      <div id="bump-chart" class="w-full overflow-x-auto"></div>
+      
+      <!-- BUMP CHART METHODOLOGICAL FOOTNOTE -->
+      <div class="mt-4 pt-3 border-t border-neutral-800 text-[11px] text-neutral-400 font-mono">
+        <div class="flex items-start space-x-2">
+          <span class="text-amber-400 text-sm leading-none mt-0.5">ⓘ</span>
+          <div class="space-y-1">
+            <p><strong class="text-neutral-200">Tratamiento de Escala Ordinal y Puesto #5 Desierto:</strong> En los quinquenios donde sólo 3 o 4 países tuvieron producciones activas (N &gt; 0), los países restantes con 0 producciones comparten por definición el último puesto (#6). Al no existir países con cuotas intermedias de 1 tema para ocupar el puesto #5, este queda vacío. En 1975–1979 y 1980–1984, el puesto #5 fue ocupado por la categoría residual <em>Otros</em> (Trinidad, Montserrat), omitida como línea individual para evitar saturación visual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE BEESWARM ARCHIVE & SOUND MACHINE -->
+  <section id="beeswarm-section" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-neutral-800">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+      <div class="space-y-2">
+        <span class="text-[11px] font-mono font-bold text-[#E05A47] uppercase tracking-wider block">03 / CORPUS DE 126 GRABACIONES</span>
+        <div class="flex flex-wrap items-center gap-3">
+          <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white tracking-tight">
+            The Sound Machine: Archivo Acústico
+          </h2>
+          <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-amber-500/10 text-amber-400 border border-amber-500/30">
+            Sintetizador Web Audio Activo
+          </span>
+        </div>
+        <p class="text-neutral-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
+          Cada nodo representa una producción fonográfica auditada. Haz clic en cualquier registro para inspeccionar su ficha catalográfica y disparar el sintetizador de ritmos de época (Roland TR-808 / Casio MT-40).
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="flex flex-wrap items-center gap-1.5 font-mono text-xs">
+        <button onclick="filterBeeswarm('All')" class="filter-btn px-3 py-1.5 bg-neutral-100 text-black font-bold border border-white transition">Todos (126)</button>
+        <button onclick="filterBeeswarm('Jamaica')" class="filter-btn px-3 py-1.5 text-neutral-400 hover:text-white border border-neutral-800 transition">Jamaica</button>
+        <button onclick="filterBeeswarm('Puerto Rico')" class="filter-btn px-3 py-1.5 text-neutral-400 hover:text-white border border-neutral-800 transition">Puerto Rico</button>
+        <button onclick="filterBeeswarm('Panamá')" class="filter-btn px-3 py-1.5 text-neutral-400 hover:text-white border border-neutral-800 transition">Panamá</button>
+        <button onclick="filterBeeswarm('Milestone')" class="filter-btn px-3 py-1.5 text-amber-400 hover:text-amber-300 border border-amber-500/40 bg-amber-500/5 transition">★ Hitos Clave</button>
+      </div>
+    </div>
+
+    <!-- Grid: Beeswarm Chart (Left) + Song Inspector & Synth Player Card (Right) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- Chart Canvas (8 cols) -->
+      <div class="lg:col-span-8 border border-neutral-800 bg-[#0B0D12] p-4 sm:p-6 relative min-h-[460px] flex items-center justify-center">
+        <div id="beeswarm-chart" class="w-full"></div>
+      </div>
+
+      <!-- Song Inspector & Synth Player Card (4 cols) -->
+      <div id="inspector-card" class="lg:col-span-4 border border-neutral-800 bg-[#0B0D12] p-5 flex flex-col justify-between">
+        <div class="space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-neutral-800">
+            <span id="card-badge" class="px-2 py-0.5 text-[10px] font-mono font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/30">
+              ★ HITO FUNDACIONAL
+            </span>
+            <span id="card-year" class="font-mono text-sm text-neutral-400 font-bold">1990</span>
+          </div>
+
+          <div>
+            <h3 id="card-title" class="text-2xl font-syne font-extrabold text-white leading-tight">
+              Dem Bow
+            </h3>
+          </div>
+          
+          <div class="space-y-2 text-xs font-mono">
+            <div class="flex justify-between py-1 border-b border-neutral-850">
+              <span class="text-neutral-500 uppercase">Productor:</span>
+              <span id="card-producer" class="font-bold text-white text-right">Bobby Digital Dixon</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-neutral-850">
+              <span class="text-neutral-500 uppercase">Sello:</span>
+              <span id="card-label" class="text-neutral-300 text-right">VP Records / Digital-B</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-neutral-850">
+              <span class="text-neutral-500 uppercase">Origen:</span>
+              <span id="card-country" class="text-neutral-300 text-right">Jamaica</span>
+            </div>
+            <div class="flex justify-between py-1 border-b border-neutral-850">
+              <span class="text-neutral-500 uppercase">Compás:</span>
+              <span id="card-rhythm" class="text-amber-400 text-right font-bold">Compás Dem Bow 3:2 (96 BPM)</span>
+            </div>
+          </div>
+
+          <div id="card-desc" class="p-3 border-l border-neutral-700 bg-neutral-900/40 text-xs text-neutral-300 leading-relaxed font-sans">
+            Bobby Digital Dixon y Steely & Clevie fijan el compás 3:2 sincopado (el ADN rítmico definitivo del reguetón).
+          </div>
+        </div>
+
+        <!-- Synthesized Audio Player Console -->
+        <div class="pt-5 mt-4 border-t border-neutral-800 space-y-3">
+          <div class="flex items-center justify-between font-mono text-[11px] text-neutral-500">
+            <span>MOTOR DE SÍNTESIS WEB AUDIO</span>
+            <div id="waveform-visualizer" class="flex items-end space-x-1 h-5">
+              <span class="w-1 bg-amber-400 h-2"></span>
+              <span class="w-1 bg-amber-400 h-4"></span>
+              <span class="w-1 bg-amber-400 h-5"></span>
+              <span class="w-1 bg-amber-400 h-3"></span>
+              <span class="w-1 bg-amber-400 h-4"></span>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <button id="play-beat-btn" onclick="toggleBeatPlayback()" class="flex-1 py-2.5 bg-neutral-100 text-black font-mono font-bold text-xs hover:bg-amber-400 transition flex items-center justify-center space-x-2">
+              <span id="play-btn-icon">▶</span>
+              <span id="play-btn-text">REPRODUCIR BEAT</span>
+            </button>
+            <a id="card-spotify-btn" href="https://open.spotify.com/search/Dem%20Bow%20Shabba%20Ranks" target="_blank" class="px-3 py-2.5 border border-neutral-700 text-neutral-300 hover:text-white hover:border-neutral-500 font-mono text-xs transition" title="Buscar en Spotify">
+              Spotify ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDITORIAL COLOPHON / FOOTER -->
+  <footer class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-xs font-mono text-neutral-500">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-neutral-850">
+      <div class="space-y-2">
+        <span class="text-neutral-300 font-bold block">EXPOANDES 2026 · GRUPO 6</span>
+        <p class="font-sans leading-relaxed text-neutral-400">
+          Proyecto de análisis cuantitativo y etnomusicología computacional sobre la génesis transcaribeña de la música urbana.
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <span class="text-neutral-300 font-bold block">DATOS Y METODOLOGÍA</span>
+        <p class="font-sans leading-relaxed text-neutral-400">
+          Base auditada: <code class="text-neutral-300 font-mono">base_de_datos_grupo6_auditada.xlsx</code> (126 registros, cero valores nulos en nacionalidad de productores).
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <span class="text-neutral-300 font-bold block">ARTEFACTOS COMPLEMENTARIOS</span>
+        <div class="space-y-1">
+          <p class="text-neutral-400 font-mono text-[11px]">Póster Físico: Formato 70×100 cm exhibido en stand de ExpoAndes 2026.</p>
+          <p><span class="text-neutral-400">→ Visualización interactiva D3.js v7 + Web Audio API</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-neutral-600">
+      <span>UNIVERSIDAD DE LOS ANDES · DEPARTAMENTO DE MÚSICA &amp; INGENIERÍA</span>
+      <span>1970 — 1999 · ARCHIVO HISTÓRICO CARIBEÑO</span>
+    </div>
+  </footer>
+
+  <script>
+    const SONGS = [{"id": 1, "excel_row": 4, "title": "Spanish Omega", "year": 1970, "producer": "Keith Hudson (Hudson Keith Linberg)", "label": "Inbidimts Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Spanish Omega Keith Hudson (Hudson Keith Linberg)"}, {"id": 2, "excel_row": 5, "title": "Wake the town", "year": 1970, "producer": "Arthur \"Duke\" Reid", "label": "Treasure Isle", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "Nacimiento del toasting / deejaying con U-Roy; el MC rima sobre el instrumental.", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Wake the town Arthur \"Duke\" Reid"}, {"id": 3, "excel_row": 6, "title": "You Can Get It If You Really Want", "year": 1970, "producer": "Jimmy Cliff", "label": "Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "You Can Get It If You Really Want Jimmy Cliff"}, {"id": 4, "excel_row": 7, "title": "I want a love I can feel", "year": 1970, "producer": "Henry Lawes", "label": "Studio one", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "I want a love I can feel Henry Lawes"}, {"id": 5, "excel_row": 8, "title": "Rivers of Babylon", "year": 1972, "producer": "Tony Brevett", "label": "Beverley's Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Rivers of Babylon Tony Brevett"}, {"id": 6, "excel_row": 9, "title": "The Harder They Come", "year": 1972, "producer": "Jimmy Cliff", "label": "Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "Película y banda sonora que internacionalizó el reggae a escala global.", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "The Harder They Come Jimmy Cliff"}, {"id": 7, "excel_row": 10, "title": "Johnny Too Bad", "year": 1972, "producer": "Byron Lee", "label": "Panther Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Johnny Too Bad Byron Lee"}, {"id": 8, "excel_row": 11, "title": "Prende El Fogón", "year": 1972, "producer": "Larry Harlow", "label": "Inca Records", "country": "Estados Unidos", "nationality_raw": "Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Prende El Fogón Larry Harlow"}, {"id": 9, "excel_row": 12, "title": "Duppy Conqueror", "year": 1973, "producer": "Chris Blackwell", "label": "Island Records", "country": "Reino Unido", "nationality_raw": "Reino Unido", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Duppy Conqueror Chris Blackwell"}, {"id": 10, "excel_row": 13, "title": "Things in Life", "year": 1973, "producer": "Lloyd “Matador” Daley", "label": "Syndicate", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Things in Life Lloyd “Matador” Daley"}, {"id": 11, "excel_row": 14, "title": "Get Up, Stand Up", "year": 1973, "producer": "Chris Blackwell", "label": "Tuff Gong", "country": "Reino Unido", "nationality_raw": "Reino Unido", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Get Up, Stand Up Chris Blackwell"}, {"id": 12, "excel_row": 15, "title": "No Woman, No Cry", "year": 1974, "producer": "Chris Blackwell; Bob Marley & The Wailers", "label": "Island Records; Tuff Gong", "country": "Jamaica", "nationality_raw": "Reino Unido, Jamaica", "is_milestone": true, "milestone_text": "Consagración del reggae roots de Bob Marley con producción transatlántica de Island.", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "No Woman, No Cry Chris Blackwell; Bob Marley & The Wailers"}, {"id": 13, "excel_row": 16, "title": "Some Like It Dread", "year": 1975, "producer": "Tony Robinson", "label": "Blue Mahoe", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Some Like It Dread Tony Robinson"}, {"id": 14, "excel_row": 17, "title": "La Media Vuelta", "year": 1975, "producer": "Cecilio “Chino” Williams y Lloyd Gallimore", "label": "Tamayo Records", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "La Media Vuelta Cecilio “Chino” Williams y Lloyd Gallimore"}, {"id": 15, "excel_row": 18, "title": "Legalize It", "year": 1976, "producer": "Peter Tosh", "label": "Columbia Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Legalize It Peter Tosh"}, {"id": 16, "excel_row": 19, "title": "Police and Thieves", "year": 1977, "producer": "Rainford Hugh Perry", "label": "Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "Innovación del dub y eco espacial por Lee 'Scratch' Perry en el estudio Black Ark.", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Police and Thieves Rainford Hugh Perry"}, {"id": 17, "excel_row": 20, "title": "Three Little Birds", "year": 1977, "producer": "Chris Blackwell", "label": "Island Records", "country": "Reino Unido", "nationality_raw": "Reino Unido", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Three Little Birds Chris Blackwell"}, {"id": 18, "excel_row": 21, "title": "Uptown Top Ranking", "year": 1977, "producer": "Joe Gibbs", "label": "Lightning Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Uptown Top Ranking Joe Gibbs"}, {"id": 19, "excel_row": 22, "title": "Three Piece Suit", "year": 1977, "producer": "Joe Gibbs", "label": "Joe Gibbs Record Globe", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Three Piece Suit Joe Gibbs"}, {"id": 20, "excel_row": 23, "title": "Shanti Om", "year": 1978, "producer": "Garfield Blackman", "label": "Charlie's Records", "country": "Otros", "nationality_raw": "Trinidad y Tobago", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Shanti Om Garfield Blackman"}, {"id": 21, "excel_row": 24, "title": "Is This Love", "year": 1978, "producer": "Bob Marley & The Wailers", "label": "Tuff Gong / Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Is This Love Bob Marley & The Wailers"}, {"id": 22, "excel_row": 25, "title": "Dreadlocks the Time Is Now", "year": 1978, "producer": "Tony Robinson; The Gladiators", "label": "Virgin Front Line", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Dreadlocks the Time Is Now Tony Robinson; The Gladiators"}, {"id": 23, "excel_row": 26, "title": "I Can See Clearly Now", "year": 1979, "producer": "Johnny Nash", "label": "Epic Records", "country": "Estados Unidos", "nationality_raw": "Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "I Can See Clearly Now Johnny Nash"}, {"id": 24, "excel_row": 27, "title": "Walking on the Moon", "year": 1979, "producer": "Nigel Gray", "label": "Surrey Sound Studios", "country": "Reino Unido", "nationality_raw": "Reino Unido", "is_milestone": false, "milestone_text": "", "rhythm_style": "Roots Reggae & Dub (70-76 BPM)", "search_query": "Walking on the Moon Nigel Gray"}, {"id": 25, "excel_row": 28, "title": "Biata", "year": 1980, "producer": "Willie Colón", "label": "Fania Records", "country": "Estados Unidos", "nationality_raw": "Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Biata Willie Colón"}, {"id": 26, "excel_row": 29, "title": "Sinsemilla", "year": 1980, "producer": "Sly Dunbar; Robbie Shakespeare", "label": "Taxi / Island / Mango", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Sinsemilla Sly Dunbar; Robbie Shakespeare"}, {"id": 27, "excel_row": 30, "title": "Could You Be Loved", "year": 1980, "producer": "Bob Marley & The Wailers", "label": "Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Could You Be Loved Bob Marley & The Wailers"}, {"id": 28, "excel_row": 31, "title": "Pass the Kouchie", "year": 1981, "producer": "Augustus “Gussie” Clarke", "label": "Music Works", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Pass the Kouchie Augustus “Gussie” Clarke"}, {"id": 29, "excel_row": 32, "title": "The Message", "year": 1982, "producer": "Edward Fletcher; Clifton \"Jiggs\" Chase; Sylvia Robinson", "label": "Sugar Hill Records", "country": "Estados Unidos", "nationality_raw": "Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "The Message Edward Fletcher; Clifton \"Jiggs\" Chase; Sylvia Robinson"}, {"id": 30, "excel_row": 33, "title": "Bam Bam", "year": 1982, "producer": "Winston Riley", "label": "Techniques Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "Riddim Stalag 17 por Winston Riley y Sister Nancy; el beat más sampleado del género urbano.", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Bam Bam Winston Riley"}, {"id": 31, "excel_row": 34, "title": "Lost Mi Lover", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Jah Guidance", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Lost Mi Lover Henry “Junjo” Lawes"}, {"id": 32, "excel_row": 35, "title": "Cocky Did a Hurt Me", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Channel One Recording Studio", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Cocky Did a Hurt Me Henry “Junjo” Lawes"}, {"id": 33, "excel_row": 36, "title": "Duppy or Gunman", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Channel One Recording Studio", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Duppy or Gunman Henry “Junjo” Lawes"}, {"id": 34, "excel_row": 37, "title": "Natty Sat Upon The Rock", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Channel One Recording Studio", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Natty Sat Upon The Rock Henry “Junjo” Lawes"}, {"id": 35, "excel_row": 38, "title": "I’m Getting Married", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Channel One Recording Studio", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "I’m Getting Married Henry “Junjo” Lawes"}, {"id": 36, "excel_row": 39, "title": "Morning Ride", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Channel One Recording Studio", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Morning Ride Henry “Junjo” Lawes"}, {"id": 37, "excel_row": 40, "title": "Two to Six Super Mix", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Channel One Recording Studio", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Two to Six Super Mix Henry “Junjo” Lawes"}, {"id": 38, "excel_row": 41, "title": "Wa-Do-Dem", "year": 1982, "producer": "Henry “Junjo” Lawes", "label": "Greensleeves / Volcano", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Wa-Do-Dem Henry “Junjo” Lawes"}, {"id": 39, "excel_row": 42, "title": "Joker Smoker", "year": 1982, "producer": "Jah Thomas", "label": "Midnight Rock", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Joker Smoker Jah Thomas"}, {"id": 40, "excel_row": 43, "title": "Hot Hot Hot", "year": 1982, "producer": "Alphonsus Cassell", "label": "Arrow Records", "country": "Otros", "nationality_raw": "Montserrat", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Hot Hot Hot Alphonsus Cassell"}, {"id": 41, "excel_row": 44, "title": "Bomba de Puerto Rico", "year": 1983, "producer": "Rafael Cartagena", "label": "Combo", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Bomba de Puerto Rico Rafael Cartagena"}, {"id": 42, "excel_row": 45, "title": "Police in Helicopter", "year": 1983, "producer": "Henry \"Junjo\" Lawes", "label": "Greensleeves Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Police in Helicopter Henry \"Junjo\" Lawes"}, {"id": 43, "excel_row": 46, "title": "Zungguzungguguzungguzeng", "year": 1983, "producer": "Henry \"Junjo\" Lawes", "label": "Greensleeves Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "Yellowman y Junjo Lawes fijan la cadencia métrica vocal imitada en el hip-hop y reguetón.", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Zungguzungguguzungguzeng Henry \"Junjo\" Lawes"}, {"id": 44, "excel_row": 47, "title": "One Love / People Get Ready", "year": 1984, "producer": "Bob Marley & The Wailers", "label": "Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "One Love / People Get Ready Bob Marley & The Wailers"}, {"id": 45, "excel_row": 48, "title": "Nobody move nobody get hurt", "year": 1984, "producer": "Henry Lawes", "label": "Volcano récords", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Nobody move nobody get hurt Henry Lawes"}, {"id": 46, "excel_row": 49, "title": "World-A-Music", "year": 1984, "producer": "Sly Dunbar y Robbie Shakespeare", "label": "Island Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "World-A-Music Sly Dunbar y Robbie Shakespeare"}, {"id": 47, "excel_row": 50, "title": "Tú Hablas Mucho", "year": 1984, "producer": "Grupo Cheb / Prodim S.A.", "label": "Prodim S.A.", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Tú Hablas Mucho Grupo Cheb / Prodim S.A."}, {"id": 48, "excel_row": 51, "title": "Come Along", "year": 1984, "producer": "Prince Jammy", "label": "Jammy's Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Rub-a-Dub Clásico (80-86 BPM)", "search_query": "Come Along Prince Jammy"}, {"id": 49, "excel_row": 52, "title": "Lo Que el Deni Puede Hacer", "year": 1985, "producer": "Luis Phillips", "label": "Pedsa Records Panamá", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Lo Que el Deni Puede Hacer Luis Phillips"}, {"id": 50, "excel_row": 53, "title": "Boops", "year": 1985, "producer": "Kenneth Black", "label": "Skengdon Music Corp.", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Boops Kenneth Black"}, {"id": 51, "excel_row": 54, "title": "Ring the Alarm", "year": 1985, "producer": "Winston Riley", "label": "Techniques Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Ring the Alarm Winston Riley"}, {"id": 52, "excel_row": 55, "title": "Tempo", "year": 1985, "producer": "King Tubby", "label": "FireHouse", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "King Tubby abandona las bandas de estudio e inicia la era de sintetizadores en Jamaica.", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Tempo King Tubby"}, {"id": 53, "excel_row": 56, "title": "Buddy Bye", "year": 1985, "producer": "King Jammy", "label": "Jammy's", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Buddy Bye King Jammy"}, {"id": 54, "excel_row": 57, "title": "De la Calle", "year": 1985, "producer": "DJ Negro", "label": "Independiente", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "DJ Negro produce la primera cinta independiente de rap callejero en San Juan, Puerto Rico.", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "De la Calle DJ Negro"}, {"id": 55, "excel_row": 58, "title": "Under Mi Sleng Teng", "year": 1986, "producer": "Lloyd James", "label": "Jammy’s records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "King Jammy crea el primer hit digital con el teclado Casio MT-40, inaugurando el dancehall electrónico.", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Under Mi Sleng Teng Lloyd James"}, {"id": 56, "excel_row": 59, "title": "Mi Mujer Habla Así", "year": 1987, "producer": "Ramón Bustamante", "label": "Warrior’s Productions", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "Renato y Las 4 Estrellas graban con Ramón Bustamante los primeros éxitos de reggae en español.", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Mi Mujer Habla Así Ramón Bustamante"}, {"id": 57, "excel_row": 60, "title": "La Chica de los Ojos Café", "year": 1987, "producer": "Ramón \"Pucho\" Bustamante / Pedsa Records", "label": "Pedsa Records", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "Megaéxito continental panameño de Renato en Pedsa Records.", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "La Chica de los Ojos Café Ramón \"Pucho\" Bustamante / Pedsa Records"}, {"id": 58, "excel_row": 61, "title": "El Ritual De La Banana", "year": 1987, "producer": "Javier Calamaro", "label": "EMI", "country": "Otros", "nationality_raw": "Argentina", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "El Ritual De La Banana Javier Calamaro"}, {"id": 59, "excel_row": 62, "title": "Punaany", "year": 1987, "producer": "King Jammy", "label": "Jammy’s Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "Punaany King Jammy"}, {"id": 60, "excel_row": 63, "title": "El tambor", "year": 1987, "producer": "Ramon \"Pucho\" Bustamante", "label": "Sony music", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Early Digital Dancehall (88-92 BPM)", "search_query": "El tambor Ramon \"Pucho\" Bustamante"}, {"id": 61, "excel_row": 64, "title": "Viernes 13", "year": 1989, "producer": "DJ Negro", "label": "Prime Entertainment", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Viernes 13 DJ Negro"}, {"id": 62, "excel_row": 65, "title": "Monalisa", "year": 1989, "producer": "Stanly Brian", "label": "O.M Productions", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Monalisa Stanly Brian"}, {"id": 63, "excel_row": 66, "title": "La Escuela", "year": 1989, "producer": "Rubén Urrutia", "label": "WFH Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "La Escuela Rubén Urrutia"}, {"id": 64, "excel_row": 67, "title": "El mueve cucuta", "year": 1989, "producer": "Michael Ellis / Karl Wright", "label": "Prime Records", "country": "Panamá", "nationality_raw": "Panamá, Jamaica", "is_milestone": true, "milestone_text": "Michael Ellis (Panamá) y Karl Wright (Jamaica) introducen el reggae en español a Prime Records.", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "El mueve cucuta Michael Ellis / Karl Wright"}, {"id": 65, "excel_row": 68, "title": "Llega Navidad", "year": 1989, "producer": "Stanly Brian", "label": "O.M. Productions", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Llega Navidad Stanly Brian"}, {"id": 66, "excel_row": 69, "title": "Lady red", "year": 1989, "producer": "Stanly Brian", "label": "O.M Productions", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Lady red Stanly Brian"}, {"id": 67, "excel_row": 70, "title": "Trampa", "year": 1989, "producer": "Jorge Oquendo", "label": "Prime Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Trampa Jorge Oquendo"}, {"id": 68, "excel_row": 71, "title": "Gusto, Sexo y Consecuencia", "year": 1989, "producer": "DJ Negro", "label": "Independiente", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Gusto, Sexo y Consecuencia DJ Negro"}, {"id": 69, "excel_row": 72, "title": "Poco man jam", "year": 1989, "producer": "Steely & Clevie", "label": "VP Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Poco man jam Steely & Clevie"}, {"id": 70, "excel_row": 73, "title": "La Recta Final", "year": 1990, "producer": "DJ Negro", "label": "Prime Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "Vico C y DJ Negro llevan el rap en español al disco de oro comercial en Puerto Rico.", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "La Recta Final DJ Negro"}, {"id": 71, "excel_row": 74, "title": "Me Acuerdo", "year": 1990, "producer": "Jorge Oquendo", "label": "Prime Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Me Acuerdo Jorge Oquendo"}, {"id": 72, "excel_row": 75, "title": "Dem Bow", "year": 1990, "producer": "Bobby Digital Dixon", "label": "VP Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": true, "milestone_text": "Bobby Digital Dixon y Steely & Clevie fijan el compás 3:2 sincopado (el ADN rítmico del reguetón).", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Dem Bow Bobby Digital Dixon"}, {"id": 73, "excel_row": 76, "title": "Pu Tun Tun", "year": 1990, "producer": "Karl Miller", "label": "Gold Disc", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "Chicho Man graba en Gold Disc el sonido romántico del reggae panameño.", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Pu Tun Tun Karl Miller"}, {"id": 74, "excel_row": 77, "title": "Rikers Island", "year": 1990, "producer": "Henry \"Junjo\" Lawes", "label": "Greensleeves", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Rikers Island Henry \"Junjo\" Lawes"}, {"id": 75, "excel_row": 78, "title": "She Likes My Reggae", "year": 1990, "producer": "DJ Negro", "label": "Prime Entertainment", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "She Likes My Reggae DJ Negro"}, {"id": 76, "excel_row": 79, "title": "Todo el mundo", "year": 1990, "producer": "Manybeat y Nelson Zapata", "label": "J&N Records", "country": "Estados Unidos", "nationality_raw": "República Dominicana, Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Todo el mundo Manybeat y Nelson Zapata"}, {"id": 77, "excel_row": 80, "title": "Tu Pum Pum", "year": 1991, "producer": "Tony Brevett", "label": "Beverley's Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Tu Pum Pum Tony Brevett"}, {"id": 78, "excel_row": 81, "title": "Bomba para Afincar", "year": 1991, "producer": "Vico C, Barón López, Jorge Oquendo y Miguel Correa", "label": "Prime Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Bomba para Afincar Vico C, Barón López, Jorge Oquendo y Miguel Correa"}, {"id": 79, "excel_row": 82, "title": "Ellos Benia (Dem Bow)", "year": 1991, "producer": "Fernando Brown", "label": "Shelly's Records", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "Nando Boom adapta en español el riddim Dem Bow para Shelly's Records.", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Ellos Benia (Dem Bow) Fernando Brown"}, {"id": 80, "excel_row": 83, "title": "Son Bow", "year": 1991, "producer": "Michael Ellis", "label": "RCA Records / BMG", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Son Bow Michael Ellis"}, {"id": 81, "excel_row": 84, "title": "Te Ves Buena", "year": 1991, "producer": "Michael Ellis", "label": "RCA Records / BMG", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "Michael Ellis y El General rompen récords de venta en toda América Latina con RCA/BMG.", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Te Ves Buena Michael Ellis"}, {"id": 82, "excel_row": 85, "title": "Muévelo", "year": 1991, "producer": "Erick Morillo", "label": "RCA Records / BMG", "country": "Estados Unidos", "nationality_raw": "Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Muévelo Erick Morillo"}, {"id": 83, "excel_row": 86, "title": "Trailer lleno de guiales", "year": 1991, "producer": "Jaime Davidson", "label": "Shelly's Records", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Trailer lleno de guiales Jaime Davidson"}, {"id": 84, "excel_row": 87, "title": "Enfermo de Amor", "year": 1991, "producer": "Ephraim Barret", "label": "Meltin’ Production", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Enfermo de Amor Ephraim Barret"}, {"id": 85, "excel_row": 88, "title": "El Pare", "year": 1991, "producer": "Michael Ellis", "label": "RCA Records", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "El Pare Michael Ellis"}, {"id": 86, "excel_row": 89, "title": "El Desorden", "year": 1991, "producer": "Carlton Barrett", "label": "Columbia", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "El Desorden Carlton Barrett"}, {"id": 87, "excel_row": 90, "title": "So' Persígueme, No Te Detengas", "year": 1992, "producer": "Pedro Torruellas (DJ Playero)", "label": "Independiente (mixtape Playero 34)", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "DJ Playero lanza Playero 34; debut histórico de Daddy Yankee e inicio del Underground.", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "So' Persígueme, No Te Detengas Pedro Torruellas (DJ Playero)"}, {"id": 88, "excel_row": 91, "title": "Get Up Stand Up and Rock", "year": 1992, "producer": "King Jammy", "label": "Epic Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Get Up Stand Up and Rock King Jammy"}, {"id": 89, "excel_row": 92, "title": "Flex", "year": 1992, "producer": "Clifton Dillon", "label": "Columbia Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Flex Clifton Dillon"}, {"id": 90, "excel_row": 93, "title": "Sweat (A La La La La Long)", "year": 1992, "producer": "Ian Lewis, Roger Lewis, Bernard Harvey", "label": "Warner Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Sweat (A La La La La Long) Ian Lewis, Roger Lewis, Bernard Harvey"}, {"id": 91, "excel_row": 94, "title": "Soy de la Calle", "year": 1992, "producer": "Vico C, DJ Negro", "label": "Prime Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Soy de la Calle Vico C, DJ Negro"}, {"id": 92, "excel_row": 95, "title": "Caramelo", "year": 1992, "producer": "Michael Ellis", "label": "RCA Records", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": false, "milestone_text": "", "rhythm_style": "Prototipo Dem Bow / Rap Urbano (92-96 BPM)", "search_query": "Caramelo Michael Ellis"}, {"id": 93, "excel_row": 96, "title": "Yamilette", "year": 1993, "producer": "DJ Playero", "label": "Playground Productions", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "DJ Playero y Daddy Yankee consolidan el formato marquesina de medleys callejeros.", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Yamilette DJ Playero"}, {"id": 94, "excel_row": 97, "title": "Explosión", "year": 1993, "producer": "Barón Lopez", "label": "Prime Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Explosión Barón Lopez"}, {"id": 95, "excel_row": 98, "title": "Mi Funeral", "year": 1994, "producer": "DJ Playero", "label": "Playground Productions", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Mi Funeral DJ Playero"}, {"id": 96, "excel_row": 99, "title": "Cierra los Ojos Bien", "year": 1994, "producer": "DJ Eric", "label": "THE NOISE", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Cierra los Ojos Bien DJ Eric"}, {"id": 97, "excel_row": 100, "title": "You Don't Love Me (No, No, No)", "year": 1994, "producer": "Wycliffe \"Steely\" Johnson y Cleveland \"Clevie\" Browne", "label": "Steely & Clevie Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "You Don't Love Me (No, No, No) Wycliffe \"Steely\" Johnson y Cleveland \"Clevie\" Browne"}, {"id": 98, "excel_row": 101, "title": "No te canses", "year": 1994, "producer": "DJ Playero", "label": "Playground Productions", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "No te canses DJ Playero"}, {"id": 99, "excel_row": 102, "title": "Cierra los ojos", "year": 1994, "producer": "DJ Negro", "label": "The Noise / BM Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Cierra los ojos DJ Negro"}, {"id": 100, "excel_row": 103, "title": "Muchos Quieren Tumbarme", "year": 1995, "producer": "DJ Nelson", "label": "THE NOISE", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Muchos Quieren Tumbarme DJ Nelson"}, {"id": 101, "excel_row": 104, "title": "Greetings", "year": 1995, "producer": "George Phang", "label": "Power House", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Greetings George Phang"}, {"id": 102, "excel_row": 105, "title": "Rica y Apretadita", "year": 1995, "producer": "Dennis Halliburton", "label": "BMG", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Rica y Apretadita Dennis Halliburton"}, {"id": 103, "excel_row": 106, "title": "Boombastic", "year": 1995, "producer": "Robert Livingston; Sting International", "label": "Virgin Records", "country": "Jamaica", "nationality_raw": "Jamaica", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Boombastic Robert Livingston; Sting International"}, {"id": 104, "excel_row": 107, "title": "Chica Interesada", "year": 1995, "producer": "Dj Playero", "label": "White Lion Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Chica Interesada Dj Playero"}, {"id": 105, "excel_row": 108, "title": "Quieren", "year": 1995, "producer": "DJ Playero", "label": "Playero Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Quieren DJ Playero"}, {"id": 106, "excel_row": 109, "title": "Yo nunca me quedo atrás", "year": 1996, "producer": "Dj Playero", "label": "BM Records & Latin Music", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Yo nunca me quedo atrás Dj Playero"}, {"id": 107, "excel_row": 110, "title": "Mis Ojos Lloran Por Ti", "year": 1996, "producer": "DJ Eric", "label": "Musical Production", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "DJ Eric y Big Boy fusionan rap melódico y dancehall; hit global de la música urbana.", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Mis Ojos Lloran Por Ti DJ Eric"}, {"id": 108, "excel_row": 111, "title": "Quiero Hacerlo Lento", "year": 1996, "producer": "DJ playero", "label": "BM Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Quiero Hacerlo Lento DJ playero"}, {"id": 109, "excel_row": 112, "title": "Original si soy", "year": 1996, "producer": "DJ Playero", "label": "BM Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Original si soy DJ Playero"}, {"id": 110, "excel_row": 113, "title": "Baila", "year": 1996, "producer": "DJ Playero", "label": "BM records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Baila DJ Playero"}, {"id": 111, "excel_row": 114, "title": "Tengo una Punto 40 Remix", "year": 1996, "producer": "DJ Playero & DJ Eric", "label": "BM RECORDS & LATIN MUSIC", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Tengo una Punto 40 Remix DJ Playero & DJ Eric"}, {"id": 112, "excel_row": 115, "title": "Posición", "year": 1997, "producer": "DJ Goldy", "label": "El Cartel & Guatauba Production's", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Posición DJ Goldy"}, {"id": 113, "excel_row": 116, "title": "Vengo Acabando", "year": 1997, "producer": "DJ Nelson", "label": "Flow Music", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Vengo Acabando DJ Nelson"}, {"id": 114, "excel_row": 117, "title": "Como Mujer", "year": 1997, "producer": "DJ Nelson", "label": "House of Music / Sony International Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Como Mujer DJ Nelson"}, {"id": 115, "excel_row": 118, "title": "El rasta mix", "year": 1997, "producer": "Rodney S. Clark", "label": "Cuentos de la Cripta 2", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "Rodney Clark (El Chombo) acelera los riddims en Panamá con Cuentos de la Cripta.", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "El rasta mix Rodney S. Clark"}, {"id": 116, "excel_row": 119, "title": "Boricua Guerrero / The Prophecy", "year": 1997, "producer": "Dr. Butcher & Nico Canada", "label": "Boricua Guerrero Productions", "country": "Puerto Rico", "nationality_raw": "Estados Unidos, Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Boricua Guerrero / The Prophecy Dr. Butcher & Nico Canada"}, {"id": 117, "excel_row": 120, "title": "The Rude Girl", "year": 1997, "producer": "Martha Ivelisse Pesante", "label": "1997 Ivy Queen Musa Sound Corp.", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "Ivy Queen debuta con producción propia, rompiendo la hegemonía masculina en el género.", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "The Rude Girl Martha Ivelisse Pesante"}, {"id": 118, "excel_row": 121, "title": "El Meneaíto", "year": 1998, "producer": "Gary H. Mason (también conocido como Big Daddy G.", "label": "BMG / Ragga Force", "country": "Estados Unidos", "nationality_raw": "Estados Unidos", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "El Meneaíto Gary H. Mason (también conocido como Big Daddy G."}, {"id": 119, "excel_row": 122, "title": "Chezidon", "year": 1998, "producer": "Ricardo Garcia", "label": "Pina Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Chezidon Ricardo Garcia"}, {"id": 120, "excel_row": 123, "title": "Descontrol", "year": 1998, "producer": "DJ Playero", "label": "BM Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Descontrol DJ Playero"}, {"id": 121, "excel_row": 124, "title": "Tra Tra Tra", "year": 1998, "producer": "DJ Joe", "label": "Don Chezina Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": true, "milestone_text": "DJ Joe y Don Chezina crean el himno definitivo de discoteca que internacionalizó el perreo.", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Tra Tra Tra DJ Joe"}, {"id": 122, "excel_row": 125, "title": "Somos Raperos Pero No Delincuentes", "year": 1998, "producer": "DJ Negro", "label": "The Noise", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Somos Raperos Pero No Delincuentes DJ Negro"}, {"id": 123, "excel_row": 126, "title": "El gato volador", "year": 1999, "producer": "Rodney Clarck", "label": "Oilers Music Inc.", "country": "Panamá", "nationality_raw": "Panamá", "is_milestone": true, "milestone_text": "El Chombo y Los Cuentos de la Cripta 3 logran un fenómeno viral panameño en todo el continente.", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "El gato volador Rodney Clarck"}, {"id": 124, "excel_row": 127, "title": "Donde Mi No Vengas", "year": 1999, "producer": "DJ Playero", "label": "BM Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Donde Mi No Vengas DJ Playero"}, {"id": 125, "excel_row": 128, "title": "Tra Tra Tra Remix", "year": 1999, "producer": "DJ Fat Tony & Rafael Pineda Heredia", "label": "Pina Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Tra Tra Tra Remix DJ Fat Tony & Rafael Pineda Heredia"}, {"id": 126, "excel_row": 129, "title": "Bien Guillao de Gangster", "year": 1999, "producer": "DJ Joe", "label": "BM Records", "country": "Puerto Rico", "nationality_raw": "Puerto Rico", "is_milestone": false, "milestone_text": "", "rhythm_style": "Reguetón Underground Boricua (94-98 BPM)", "search_query": "Bien Guillao de Gangster DJ Joe"}];
+    const TIMELINE = [{"year": 1970, "total": 4, "Jamaica_count": 4, "Jamaica_pct": 100.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 4, "Jamaica_cum_count": 4, "Jamaica_cum_pct": 100.0, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 0, "Panamá_cum_pct": 0.0, "Reino Unido_cum_count": 0, "Reino Unido_cum_pct": 0.0, "Estados Unidos_cum_count": 0, "Estados Unidos_cum_pct": 0.0, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1971, "total": 0, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 4, "Jamaica_cum_count": 4, "Jamaica_cum_pct": 100.0, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 0, "Panamá_cum_pct": 0.0, "Reino Unido_cum_count": 0, "Reino Unido_cum_pct": 0.0, "Estados Unidos_cum_count": 0, "Estados Unidos_cum_pct": 0.0, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1972, "total": 4, "Jamaica_count": 3, "Jamaica_pct": 75.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 25.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 8, "Jamaica_cum_count": 7, "Jamaica_cum_pct": 87.5, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 0, "Panamá_cum_pct": 0.0, "Reino Unido_cum_count": 0, "Reino Unido_cum_pct": 0.0, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 12.5, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1973, "total": 3, "Jamaica_count": 1, "Jamaica_pct": 33.33, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 2, "Reino Unido_pct": 66.67, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 11, "Jamaica_cum_count": 8, "Jamaica_cum_pct": 72.73, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 0, "Panamá_cum_pct": 0.0, "Reino Unido_cum_count": 2, "Reino Unido_cum_pct": 18.18, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 9.09, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1974, "total": 1, "Jamaica_count": 1, "Jamaica_pct": 100.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 12, "Jamaica_cum_count": 9, "Jamaica_cum_pct": 75.0, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 0, "Panamá_cum_pct": 0.0, "Reino Unido_cum_count": 2, "Reino Unido_cum_pct": 16.67, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 8.33, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1975, "total": 2, "Jamaica_count": 1, "Jamaica_pct": 50.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 1, "Panamá_pct": 50.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 14, "Jamaica_cum_count": 10, "Jamaica_cum_pct": 71.43, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 7.14, "Reino Unido_cum_count": 2, "Reino Unido_cum_pct": 14.29, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 7.14, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1976, "total": 1, "Jamaica_count": 1, "Jamaica_pct": 100.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 15, "Jamaica_cum_count": 11, "Jamaica_cum_pct": 73.33, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 6.67, "Reino Unido_cum_count": 2, "Reino Unido_cum_pct": 13.33, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 6.67, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1977, "total": 4, "Jamaica_count": 3, "Jamaica_pct": 75.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 1, "Reino Unido_pct": 25.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 19, "Jamaica_cum_count": 14, "Jamaica_cum_pct": 73.68, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 5.26, "Reino Unido_cum_count": 3, "Reino Unido_cum_pct": 15.79, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 5.26, "Otros_cum_count": 0, "Otros_cum_pct": 0.0}, {"year": 1978, "total": 3, "Jamaica_count": 2, "Jamaica_pct": 66.67, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 1, "Otros_pct": 33.33, "cum_total": 22, "Jamaica_cum_count": 16, "Jamaica_cum_pct": 72.73, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 4.55, "Reino Unido_cum_count": 3, "Reino Unido_cum_pct": 13.64, "Estados Unidos_cum_count": 1, "Estados Unidos_cum_pct": 4.55, "Otros_cum_count": 1, "Otros_cum_pct": 4.55}, {"year": 1979, "total": 2, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 1, "Reino Unido_pct": 50.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 50.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 24, "Jamaica_cum_count": 16, "Jamaica_cum_pct": 66.67, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 4.17, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 16.67, "Estados Unidos_cum_count": 2, "Estados Unidos_cum_pct": 8.33, "Otros_cum_count": 1, "Otros_cum_pct": 4.17}, {"year": 1980, "total": 3, "Jamaica_count": 2, "Jamaica_pct": 66.67, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 33.33, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 27, "Jamaica_cum_count": 18, "Jamaica_cum_pct": 66.67, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 3.7, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 14.81, "Estados Unidos_cum_count": 3, "Estados Unidos_cum_pct": 11.11, "Otros_cum_count": 1, "Otros_cum_pct": 3.7}, {"year": 1981, "total": 1, "Jamaica_count": 1, "Jamaica_pct": 100.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 28, "Jamaica_cum_count": 19, "Jamaica_cum_pct": 67.86, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 3.57, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 14.29, "Estados Unidos_cum_count": 3, "Estados Unidos_cum_pct": 10.71, "Otros_cum_count": 1, "Otros_cum_pct": 3.57}, {"year": 1982, "total": 12, "Jamaica_count": 10, "Jamaica_pct": 83.33, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 8.33, "Otros_count": 1, "Otros_pct": 8.33, "cum_total": 40, "Jamaica_cum_count": 29, "Jamaica_cum_pct": 72.5, "Puerto Rico_cum_count": 0, "Puerto Rico_cum_pct": 0.0, "Panamá_cum_count": 1, "Panamá_cum_pct": 2.5, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 10.0, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 10.0, "Otros_cum_count": 2, "Otros_cum_pct": 5.0}, {"year": 1983, "total": 3, "Jamaica_count": 2, "Jamaica_pct": 66.67, "Puerto Rico_count": 1, "Puerto Rico_pct": 33.33, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 43, "Jamaica_cum_count": 31, "Jamaica_cum_pct": 72.09, "Puerto Rico_cum_count": 1, "Puerto Rico_cum_pct": 2.33, "Panamá_cum_count": 1, "Panamá_cum_pct": 2.33, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 9.3, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 9.3, "Otros_cum_count": 2, "Otros_cum_pct": 4.65}, {"year": 1984, "total": 5, "Jamaica_count": 4, "Jamaica_pct": 80.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 1, "Panamá_pct": 20.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 48, "Jamaica_cum_count": 35, "Jamaica_cum_pct": 72.92, "Puerto Rico_cum_count": 1, "Puerto Rico_cum_pct": 2.08, "Panamá_cum_count": 2, "Panamá_cum_pct": 4.17, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 8.33, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 8.33, "Otros_cum_count": 2, "Otros_cum_pct": 4.17}, {"year": 1985, "total": 6, "Jamaica_count": 4, "Jamaica_pct": 66.67, "Puerto Rico_count": 1, "Puerto Rico_pct": 16.67, "Panamá_count": 1, "Panamá_pct": 16.67, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 54, "Jamaica_cum_count": 39, "Jamaica_cum_pct": 72.22, "Puerto Rico_cum_count": 2, "Puerto Rico_cum_pct": 3.7, "Panamá_cum_count": 3, "Panamá_cum_pct": 5.56, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 7.41, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 7.41, "Otros_cum_count": 2, "Otros_cum_pct": 3.7}, {"year": 1986, "total": 1, "Jamaica_count": 1, "Jamaica_pct": 100.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 55, "Jamaica_cum_count": 40, "Jamaica_cum_pct": 72.73, "Puerto Rico_cum_count": 2, "Puerto Rico_cum_pct": 3.64, "Panamá_cum_count": 3, "Panamá_cum_pct": 5.45, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 7.27, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 7.27, "Otros_cum_count": 2, "Otros_cum_pct": 3.64}, {"year": 1987, "total": 5, "Jamaica_count": 1, "Jamaica_pct": 20.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 3, "Panamá_pct": 60.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 1, "Otros_pct": 20.0, "cum_total": 60, "Jamaica_cum_count": 41, "Jamaica_cum_pct": 68.33, "Puerto Rico_cum_count": 2, "Puerto Rico_cum_pct": 3.33, "Panamá_cum_count": 6, "Panamá_cum_pct": 10.0, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 6.67, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 6.67, "Otros_cum_count": 3, "Otros_cum_pct": 5.0}, {"year": 1988, "total": 0, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 0, "Puerto Rico_pct": 0.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 60, "Jamaica_cum_count": 41, "Jamaica_cum_pct": 68.33, "Puerto Rico_cum_count": 2, "Puerto Rico_cum_pct": 3.33, "Panamá_cum_count": 6, "Panamá_cum_pct": 10.0, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 6.67, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 6.67, "Otros_cum_count": 3, "Otros_cum_pct": 5.0}, {"year": 1989, "total": 9, "Jamaica_count": 1, "Jamaica_pct": 11.11, "Puerto Rico_count": 4, "Puerto Rico_pct": 44.44, "Panamá_count": 4, "Panamá_pct": 44.44, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 69, "Jamaica_cum_count": 42, "Jamaica_cum_pct": 60.87, "Puerto Rico_cum_count": 6, "Puerto Rico_cum_pct": 8.7, "Panamá_cum_count": 10, "Panamá_cum_pct": 14.49, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 5.8, "Estados Unidos_cum_count": 4, "Estados Unidos_cum_pct": 5.8, "Otros_cum_count": 3, "Otros_cum_pct": 4.35}, {"year": 1990, "total": 7, "Jamaica_count": 2, "Jamaica_pct": 28.57, "Puerto Rico_count": 3, "Puerto Rico_pct": 42.86, "Panamá_count": 1, "Panamá_pct": 14.29, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 14.29, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 76, "Jamaica_cum_count": 44, "Jamaica_cum_pct": 57.89, "Puerto Rico_cum_count": 9, "Puerto Rico_cum_pct": 11.84, "Panamá_cum_count": 11, "Panamá_cum_pct": 14.47, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 5.26, "Estados Unidos_cum_count": 5, "Estados Unidos_cum_pct": 6.58, "Otros_cum_count": 3, "Otros_cum_pct": 3.95}, {"year": 1991, "total": 10, "Jamaica_count": 3, "Jamaica_pct": 30.0, "Puerto Rico_count": 1, "Puerto Rico_pct": 10.0, "Panamá_count": 5, "Panamá_pct": 50.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 10.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 86, "Jamaica_cum_count": 47, "Jamaica_cum_pct": 54.65, "Puerto Rico_cum_count": 10, "Puerto Rico_cum_pct": 11.63, "Panamá_cum_count": 16, "Panamá_cum_pct": 18.6, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 4.65, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 6.98, "Otros_cum_count": 3, "Otros_cum_pct": 3.49}, {"year": 1992, "total": 6, "Jamaica_count": 3, "Jamaica_pct": 50.0, "Puerto Rico_count": 2, "Puerto Rico_pct": 33.33, "Panamá_count": 1, "Panamá_pct": 16.67, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 92, "Jamaica_cum_count": 50, "Jamaica_cum_pct": 54.35, "Puerto Rico_cum_count": 12, "Puerto Rico_cum_pct": 13.04, "Panamá_cum_count": 17, "Panamá_cum_pct": 18.48, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 4.35, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 6.52, "Otros_cum_count": 3, "Otros_cum_pct": 3.26}, {"year": 1993, "total": 2, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 2, "Puerto Rico_pct": 100.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 94, "Jamaica_cum_count": 50, "Jamaica_cum_pct": 53.19, "Puerto Rico_cum_count": 14, "Puerto Rico_cum_pct": 14.89, "Panamá_cum_count": 17, "Panamá_cum_pct": 18.09, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 4.26, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 6.38, "Otros_cum_count": 3, "Otros_cum_pct": 3.19}, {"year": 1994, "total": 5, "Jamaica_count": 1, "Jamaica_pct": 20.0, "Puerto Rico_count": 4, "Puerto Rico_pct": 80.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 99, "Jamaica_cum_count": 51, "Jamaica_cum_pct": 51.52, "Puerto Rico_cum_count": 18, "Puerto Rico_cum_pct": 18.18, "Panamá_cum_count": 17, "Panamá_cum_pct": 17.17, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 4.04, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 6.06, "Otros_cum_count": 3, "Otros_cum_pct": 3.03}, {"year": 1995, "total": 6, "Jamaica_count": 3, "Jamaica_pct": 50.0, "Puerto Rico_count": 3, "Puerto Rico_pct": 50.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 105, "Jamaica_cum_count": 54, "Jamaica_cum_pct": 51.43, "Puerto Rico_cum_count": 21, "Puerto Rico_cum_pct": 20.0, "Panamá_cum_count": 17, "Panamá_cum_pct": 16.19, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 3.81, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 5.71, "Otros_cum_count": 3, "Otros_cum_pct": 2.86}, {"year": 1996, "total": 6, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 6, "Puerto Rico_pct": 100.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 111, "Jamaica_cum_count": 54, "Jamaica_cum_pct": 48.65, "Puerto Rico_cum_count": 27, "Puerto Rico_cum_pct": 24.32, "Panamá_cum_count": 17, "Panamá_cum_pct": 15.32, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 3.6, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 5.41, "Otros_cum_count": 3, "Otros_cum_pct": 2.7}, {"year": 1997, "total": 6, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 5, "Puerto Rico_pct": 83.33, "Panamá_count": 1, "Panamá_pct": 16.67, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 117, "Jamaica_cum_count": 54, "Jamaica_cum_pct": 46.15, "Puerto Rico_cum_count": 32, "Puerto Rico_cum_pct": 27.35, "Panamá_cum_count": 18, "Panamá_cum_pct": 15.38, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 3.42, "Estados Unidos_cum_count": 6, "Estados Unidos_cum_pct": 5.13, "Otros_cum_count": 3, "Otros_cum_pct": 2.56}, {"year": 1998, "total": 5, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 4, "Puerto Rico_pct": 80.0, "Panamá_count": 0, "Panamá_pct": 0.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 1, "Estados Unidos_pct": 20.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 122, "Jamaica_cum_count": 54, "Jamaica_cum_pct": 44.26, "Puerto Rico_cum_count": 36, "Puerto Rico_cum_pct": 29.51, "Panamá_cum_count": 18, "Panamá_cum_pct": 14.75, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 3.28, "Estados Unidos_cum_count": 7, "Estados Unidos_cum_pct": 5.74, "Otros_cum_count": 3, "Otros_cum_pct": 2.46}, {"year": 1999, "total": 4, "Jamaica_count": 0, "Jamaica_pct": 0.0, "Puerto Rico_count": 3, "Puerto Rico_pct": 75.0, "Panamá_count": 1, "Panamá_pct": 25.0, "Reino Unido_count": 0, "Reino Unido_pct": 0.0, "Estados Unidos_count": 0, "Estados Unidos_pct": 0.0, "Otros_count": 0, "Otros_pct": 0.0, "cum_total": 126, "Jamaica_cum_count": 54, "Jamaica_cum_pct": 42.86, "Puerto Rico_cum_count": 39, "Puerto Rico_cum_pct": 30.95, "Panamá_cum_count": 19, "Panamá_cum_pct": 15.08, "Reino Unido_cum_count": 4, "Reino Unido_cum_pct": 3.17, "Estados Unidos_cum_count": 7, "Estados Unidos_cum_pct": 5.56, "Otros_cum_count": 3, "Otros_cum_pct": 2.38}];
+    const BUMP = [{"period": "1970-1974", "start_year": 1970, "end_year": 1974, "country": "Jamaica", "count": 9, "percentage": 75.0, "rank": 1}, {"period": "1970-1974", "start_year": 1970, "end_year": 1974, "country": "Reino Unido", "count": 2, "percentage": 16.7, "rank": 2}, {"period": "1970-1974", "start_year": 1970, "end_year": 1974, "country": "Estados Unidos", "count": 1, "percentage": 8.3, "rank": 3}, {"period": "1970-1974", "start_year": 1970, "end_year": 1974, "country": "Puerto Rico", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1970-1974", "start_year": 1970, "end_year": 1974, "country": "Panamá", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1970-1974", "start_year": 1970, "end_year": 1974, "country": "Otros", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1975-1979", "start_year": 1975, "end_year": 1979, "country": "Jamaica", "count": 7, "percentage": 58.3, "rank": 1}, {"period": "1975-1979", "start_year": 1975, "end_year": 1979, "country": "Reino Unido", "count": 2, "percentage": 16.7, "rank": 2}, {"period": "1975-1979", "start_year": 1975, "end_year": 1979, "country": "Panamá", "count": 1, "percentage": 8.3, "rank": 3}, {"period": "1975-1979", "start_year": 1975, "end_year": 1979, "country": "Estados Unidos", "count": 1, "percentage": 8.3, "rank": 4}, {"period": "1975-1979", "start_year": 1975, "end_year": 1979, "country": "Otros", "count": 1, "percentage": 8.3, "rank": 5}, {"period": "1975-1979", "start_year": 1975, "end_year": 1979, "country": "Puerto Rico", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1980-1984", "start_year": 1980, "end_year": 1984, "country": "Jamaica", "count": 19, "percentage": 79.2, "rank": 1}, {"period": "1980-1984", "start_year": 1980, "end_year": 1984, "country": "Estados Unidos", "count": 2, "percentage": 8.3, "rank": 2}, {"period": "1980-1984", "start_year": 1980, "end_year": 1984, "country": "Puerto Rico", "count": 1, "percentage": 4.2, "rank": 3}, {"period": "1980-1984", "start_year": 1980, "end_year": 1984, "country": "Panamá", "count": 1, "percentage": 4.2, "rank": 4}, {"period": "1980-1984", "start_year": 1980, "end_year": 1984, "country": "Otros", "count": 1, "percentage": 4.2, "rank": 5}, {"period": "1980-1984", "start_year": 1980, "end_year": 1984, "country": "Reino Unido", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1985-1989", "start_year": 1985, "end_year": 1989, "country": "Panamá", "count": 8, "percentage": 38.1, "rank": 1}, {"period": "1985-1989", "start_year": 1985, "end_year": 1989, "country": "Jamaica", "count": 7, "percentage": 33.3, "rank": 2}, {"period": "1985-1989", "start_year": 1985, "end_year": 1989, "country": "Puerto Rico", "count": 5, "percentage": 23.8, "rank": 3}, {"period": "1985-1989", "start_year": 1985, "end_year": 1989, "country": "Otros", "count": 1, "percentage": 4.8, "rank": 4}, {"period": "1985-1989", "start_year": 1985, "end_year": 1989, "country": "Reino Unido", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1985-1989", "start_year": 1985, "end_year": 1989, "country": "Estados Unidos", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1990-1994", "start_year": 1990, "end_year": 1994, "country": "Puerto Rico", "count": 12, "percentage": 40.0, "rank": 1}, {"period": "1990-1994", "start_year": 1990, "end_year": 1994, "country": "Jamaica", "count": 9, "percentage": 30.0, "rank": 2}, {"period": "1990-1994", "start_year": 1990, "end_year": 1994, "country": "Panamá", "count": 7, "percentage": 23.3, "rank": 3}, {"period": "1990-1994", "start_year": 1990, "end_year": 1994, "country": "Estados Unidos", "count": 2, "percentage": 6.7, "rank": 4}, {"period": "1990-1994", "start_year": 1990, "end_year": 1994, "country": "Reino Unido", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1990-1994", "start_year": 1990, "end_year": 1994, "country": "Otros", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1995-1999", "start_year": 1995, "end_year": 1999, "country": "Puerto Rico", "count": 21, "percentage": 77.8, "rank": 1}, {"period": "1995-1999", "start_year": 1995, "end_year": 1999, "country": "Jamaica", "count": 3, "percentage": 11.1, "rank": 2}, {"period": "1995-1999", "start_year": 1995, "end_year": 1999, "country": "Panamá", "count": 2, "percentage": 7.4, "rank": 3}, {"period": "1995-1999", "start_year": 1995, "end_year": 1999, "country": "Estados Unidos", "count": 1, "percentage": 3.7, "rank": 4}, {"period": "1995-1999", "start_year": 1995, "end_year": 1999, "country": "Reino Unido", "count": 0, "percentage": 0.0, "rank": 6}, {"period": "1995-1999", "start_year": 1995, "end_year": 1999, "country": "Otros", "count": 0, "percentage": 0.0, "rank": 6}];
+
+    const COLORS = {
+      'Jamaica': '#E5A93C',
+      'Puerto Rico': '#3B82F6',
+      'Panamá': '#E05A47',
+      'Reino Unido': '#8B5CF6',
+      'Estados Unidos': '#0D9488',
+      'Otros': '#94A3B8'
+    };
+
+    let streamMode = 'pct'; // 'pct' (flujo anual %), 'cum' (acumulado histórico %), or 'count' (volumen absoluto)
+
+    // ----------------------------------------------------
+    // 1. RENDER STREAMGRAPH (STREAM) OR BARS (VOLUME) WITH D3.JS
+    // ----------------------------------------------------
+    function renderStreamgraph() {
+      const container = d3.select("#streamgraph-chart");
+      container.html(""); // Clear
+
+      const width = container.node().getBoundingClientRect().width || 900;
+      const height = 360;
+      const margin = { top: 25, right: 30, bottom: 40, left: 50 };
+
+      const svg = container.append("svg")
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("class", "w-full overflow-visible");
+
+      const keys = ['Otros', 'Estados Unidos', 'Reino Unido', 'Panamá', 'Puerto Rico', 'Jamaica'];
+      const tooltip = d3.select("#streamgraph-tooltip");
+
+      if (streamMode === 'count') {
+        // ====================================================
+        // RENDER STACKED BARS FOR DISCRETE ANNUAL VOLUME
+        // ====================================================
+        const xBand = d3.scaleBand()
+          .domain(TIMELINE.map(d => d.year))
+          .range([margin.left, width - margin.right])
+          .padding(0.24);
+
+        const maxCount = d3.max(TIMELINE, d => d.total) || 12;
+        const y = d3.scaleLinear()
+          .domain([0, maxCount + 1])
+          .range([height - margin.bottom, margin.top]);
+
+        const stack = d3.stack()
+          .keys(keys)
+          .value((d, key) => d[key + "_count"] || 0)
+          .offset(d3.stackOffsetNone);
+
+        const series = stack(TIMELINE);
+
+        // Horizontal dashed gridlines
+        svg.append("g")
+          .attr("class", "grid")
+          .attr("transform", `translate(${margin.left}, 0)`)
+          .call(d3.axisLeft(y)
+            .ticks(5)
+            .tickSize(-(width - margin.left - margin.right))
+            .tickFormat("")
+          )
+          .call(g => g.select(".domain").remove())
+          .call(g => g.selectAll(".tick line").attr("stroke", "#1F2433").attr("stroke-dasharray", "2,2"));
+
+        // Bar groups by country layer
+        const groups = svg.selectAll(".bar-group")
+          .data(series)
+          .join("g")
+          .attr("class", "bar-group")
+          .attr("fill", d => COLORS[d.key]);
+
+        groups.selectAll("rect")
+          .data(d => d.map(item => ({ ...item, country: d.key })))
+          .join("rect")
+          .attr("class", "bar-segment transition-all duration-150")
+          .attr("x", d => xBand(d.data.year))
+          .attr("y", d => y(d[1]))
+          .attr("height", d => Math.max(0, y(d[0]) - y(d[1])))
+          .attr("width", xBand.bandwidth())
+          .attr("rx", 2)
+          .attr("stroke", "#0A0C10")
+          .attr("stroke-width", 0.6)
+          .attr("opacity", 0.9);
+
+        // Total count labels above bars
+        svg.selectAll(".total-label")
+          .data(TIMELINE.filter(d => d.total > 0))
+          .join("text")
+          .attr("class", "total-label font-mono font-bold text-[10px]")
+          .attr("x", d => xBand(d.year) + xBand.bandwidth() / 2)
+          .attr("y", d => y(d.total) - 6)
+          .attr("text-anchor", "middle")
+          .attr("fill", "#E5A93C")
+          .text(d => d.total);
+
+        // Interactive Column Hover Overlays
+        svg.selectAll(".col-hover")
+          .data(TIMELINE)
+          .join("rect")
+          .attr("class", "col-hover cursor-pointer")
+          .attr("x", d => xBand(d.year) - 2)
+          .attr("y", margin.top)
+          .attr("width", xBand.bandwidth() + 4)
+          .attr("height", height - margin.top - margin.bottom)
+          .attr("fill", "transparent")
+          .on("mouseenter", function(event, d) {
+            updateStreamHUD(d.year);
+            svg.selectAll(".bar-segment").attr("opacity", seg => seg.data.year === d.year ? 1 : 0.35);
+
+            tooltip.style("left", (event.pageX + 15) + "px")
+                   .style("top", (event.pageY - 35) + "px")
+                   .classed("hidden", false)
+                   .html(`
+                      <div class="font-bold text-white mb-1.5 pb-1 border-b border-brand-border flex items-center justify-between gap-3 font-mono">
+                        <span>Año ${d.year}</span>
+                        <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Volumen Anual</span>
+                      </div>
+                      <div class="space-y-1 font-mono text-[11px]">
+                        <div class="text-slate-300 flex items-center justify-between gap-3">
+                          <span>📦 Total producciones:</span>
+                          <span class="font-bold text-white">${d.total} ${d.total === 1 ? 'canción' : 'canciones'}</span>
+                        </div>
+                        <div class="text-slate-300 flex items-center justify-between gap-3">
+                          <span>📚 Acumulado (1970–${d.year}):</span>
+                          <span class="font-bold text-brand-gold">${d.cum_total} canciones</span>
+                        </div>
+                      </div>
+                   `);
+          })
+          .on("mousemove", function(event) {
+            tooltip.style("left", (event.pageX + 15) + "px")
+                   .style("top", (event.pageY - 35) + "px");
+          })
+          .on("mouseleave", function() {
+            svg.selectAll(".bar-segment").attr("opacity", 0.9);
+            tooltip.classed("hidden", true);
+          });
+
+        // X-Axis (Every 5 years + 1970 + 1999)
+        const xAxis = d3.axisBottom(xBand)
+          .tickValues(TIMELINE.map(d => d.year).filter(y => y % 5 === 0 || y === 1970 || y === 1999));
+
+        svg.append("g")
+          .attr("transform", `translate(0, ${height - margin.bottom})`)
+          .call(xAxis)
+          .attr("class", "text-slate-400 text-xs font-mono")
+          .call(g => g.select(".domain").attr("stroke", "#1F2433"))
+          .call(g => g.selectAll(".tick line").attr("stroke", "#1F2433"));
+
+        // Y-Axis
+        const yAxis = d3.axisLeft(y)
+          .ticks(5)
+          .tickFormat(d3.format("d"));
+
+        svg.append("g")
+          .attr("transform", `translate(${margin.left}, 0)`)
+          .call(yAxis)
+          .attr("class", "text-slate-400 text-xs font-mono")
+          .call(g => g.select(".domain").remove())
+          .call(g => g.selectAll(".tick line").attr("stroke", "#1F2433"));
+
+      } else {
+        // ====================================================
+        // RENDER STREAMGRAPH (CONTINUOUS AREA) FOR PERCENTAGES
+        // ====================================================
+        const stack = d3.stack()
+          .keys(keys)
+          .value((d, key) => streamMode === 'pct' ? (d[key + "_pct"] || 0) : (d[key + "_cum_pct"] || 0))
+          .offset(d3.stackOffsetNone);
+
+        const series = stack(TIMELINE);
+
+        const x = d3.scaleLinear()
+          .domain([1970, 1999])
+          .range([margin.left, width - margin.right]);
+
+        const y = d3.scaleLinear()
+          .domain([0, 100])
+          .range([height - margin.bottom, margin.top]);
+
+        const area = d3.area()
+          .curve(d3.curveMonotoneX)
+          .x(d => x(d.data.year))
+          .y0(d => y(d[0]))
+          .y1(d => y(d[1]));
+
+        // Draw Layers
+        svg.selectAll(".layer")
+          .data(series)
+          .join("path")
+          .attr("class", "layer transition-all duration-300 cursor-pointer")
+          .attr("d", area)
+          .attr("fill", d => COLORS[d.key])
+          .attr("opacity", 0.88)
+          .attr("stroke", "#0A0C10")
+          .attr("stroke-width", 0.8)
+          .on("mouseenter", function(event, d) {
+            d3.selectAll(".layer").attr("opacity", 0.35);
+            d3.select(this).attr("opacity", 1);
+          })
+          .on("mousemove", function(event, d) {
+            const [xm] = d3.pointer(event);
+            const year = Math.round(x.invert(xm));
+            const yearData = TIMELINE.find(item => item.year === year);
+            if (!yearData) return;
+            
+            const pct = yearData[d.key + "_pct"] || 0;
+            const count = yearData[d.key + "_count"] || 0;
+            const cumPct = yearData[d.key + "_cum_pct"] || 0;
+            const cumCount = yearData[d.key + "_cum_count"] || 0;
+
+            // Update HUD
+            updateStreamHUD(year);
+
+            let modeTag = streamMode === 'pct' ? 'Flujo Anual' : 'Acumulado Histórico';
+
+            tooltip.style("left", (event.pageX + 15) + "px")
+                   .style("top", (event.pageY - 35) + "px")
+                   .classed("hidden", false)
+                   .html(`
+                      <div class="font-bold text-white mb-1.5 pb-1 border-b border-brand-border flex items-center justify-between gap-3 font-mono">
+                        <span>${year} • ${d.key}</span>
+                        <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">${modeTag}</span>
+                      </div>
+                      <div class="space-y-1 font-mono text-[11px]">
+                        <div class="text-slate-300 flex items-center justify-between gap-3">
+                          <span>⚡ Cuota en ${year}:</span>
+                          <span class="font-bold text-white" style="color: ${COLORS[d.key]}">${pct}% <span class="text-slate-400 font-normal">(${count})</span></span>
+                        </div>
+                        <div class="text-slate-300 flex items-center justify-between gap-3">
+                          <span>📚 Acumulado (1970–${year}):</span>
+                          <span class="font-bold text-brand-gold">${cumPct}% <span class="text-slate-400 font-normal">(${cumCount} de ${yearData.cum_total || 0})</span></span>
+                        </div>
+                      </div>
+                   `);
+          })
+          .on("mouseleave", function() {
+            d3.selectAll(".layer").attr("opacity", 0.88);
+            tooltip.classed("hidden", true);
+          });
+
+        // Vertical cursor hairline
+        const hairline = svg.append("line")
+          .attr("id", "stream-hairline")
+          .attr("y1", margin.top)
+          .attr("y2", height - margin.bottom)
+          .attr("stroke", "#FFFFFF")
+          .attr("stroke-width", 1)
+          .attr("stroke-dasharray", "3,3")
+          .attr("opacity", 0);
+
+        svg.on("mousemove", function(event) {
+          const [xm] = d3.pointer(event);
+          const year = Math.round(x.invert(xm));
+          if (year >= 1970 && year <= 1999) {
+            hairline.attr("x1", x(year)).attr("x2", x(year)).attr("opacity", 0.7);
+            updateStreamHUD(year);
+          }
+        }).on("mouseleave", function() {
+          hairline.attr("opacity", 0);
+        });
+
+        // X-Axis
+        const xAxis = d3.axisBottom(x)
+          .ticks(10)
+          .tickFormat(d3.format("d"));
+
+        svg.append("g")
+          .attr("transform", `translate(0, ${height - margin.bottom})`)
+          .call(xAxis)
+          .attr("class", "text-slate-400 text-xs font-mono")
+          .call(g => g.select(".domain").attr("stroke", "#1F2433"))
+          .call(g => g.selectAll(".tick line").attr("stroke", "#1F2433"));
+
+        // Y-Axis
+        const yAxis = d3.axisLeft(y)
+          .ticks(5)
+          .tickFormat(d => d + "%");
+
+        svg.append("g")
+          .attr("transform", `translate(${margin.left}, 0)`)
+          .call(yAxis)
+          .attr("class", "text-slate-400 text-xs font-mono")
+          .call(g => g.select(".domain").remove())
+          .call(g => g.selectAll(".tick line").attr("stroke", "#1F2433").attr("x2", width - margin.right - margin.left));
+      }
+    }
+
+        function setStreamMode(mode) {
+      streamMode = mode;
+      const btnPct = document.getElementById("mode-pct-btn");
+      const btnCum = document.getElementById("mode-cum-btn");
+      const btnCount = document.getElementById("mode-count-btn");
+
+      const activeClass = "px-3.5 py-1.5 text-xs font-mono font-bold bg-neutral-100 text-black border border-neutral-100 transition";
+      const inactiveClass = "px-3.5 py-1.5 text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition";
+
+      if (btnPct) btnPct.className = (mode === 'pct') ? activeClass : inactiveClass;
+      if (btnCum) btnCum.className = (mode === 'cum') ? activeClass : inactiveClass;
+      if (btnCount) btnCount.className = (mode === 'count') ? activeClass : inactiveClass;
+
+      renderStreamgraph();
+    }
+
+    function updateStreamHUD(year) {
+      const data = TIMELINE.find(d => d.year === year);
+      if (!data) return;
+
+      const hudYear = document.getElementById("hud-year");
+      const hudRowYearLabel = document.getElementById("hud-row-year-label");
+      const hudRowCumLabel = document.getElementById("hud-row-cum-label");
+      const hudTotalAnnual = document.getElementById("hud-total-annual");
+      const hudTotalCum = document.getElementById("hud-total-cum");
+
+      if (hudYear) hudYear.innerText = year;
+      if (hudRowYearLabel) hudRowYearLabel.innerText = year;
+      if (hudRowCumLabel) hudRowCumLabel.innerText = year;
+      if (hudTotalAnnual) hudTotalAnnual.innerText = `${data.total} ${data.total === 1 ? 'canción' : 'canciones'} ese año`;
+      if (hudTotalCum) hudTotalCum.innerText = `${data.cum_total || data.total} acumuladas (1970 → ${year})`;
+
+      // Warning badge for small sample sizes (N <= 2)
+      const warningBadge = document.getElementById("hud-sample-warning");
+      if (warningBadge) {
+        if (data.total <= 2 && data.total > 0) {
+          warningBadge.classList.remove("hidden");
+          warningBadge.classList.add("inline-flex");
+        } else {
+          warningBadge.classList.add("hidden");
+          warningBadge.classList.remove("inline-flex");
+        }
+      }
+
+      const keys = ['Jamaica', 'Puerto Rico', 'Panamá', 'Reino Unido', 'Estados Unidos', 'Otros'];
+
+      // 1. Annual Flow Pills
+      const annualPills = keys.map(k => {
+        const pct = data[k + "_pct"] || 0;
+        const cnt = data[k + "_count"] || 0;
+        if (cnt === 0 && pct === 0) return '';
+        return `
+          <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-brand-card border border-brand-border text-xs">
+            <span class="w-2 h-2 rounded-full" style="background-color: ${COLORS[k]}"></span>
+            <span class="text-slate-300 font-semibold">${k}:</span>
+            <span class="font-bold text-white">${pct}%</span>
+            <span class="text-slate-500 text-[10px]">(${cnt})</span>
+          </span>
+        `;
+      }).filter(Boolean).join("");
+
+      const annualContainer = document.getElementById("hud-breakdown-annual");
+      if (annualContainer) {
+        annualContainer.innerHTML = annualPills || '<span class="text-slate-500 text-xs">Sin producciones registradas en este año</span>';
+      }
+
+      // 2. Cumulative Stock Pills
+      const cumPills = keys.map(k => {
+        const cumPct = data[k + "_cum_pct"] || 0;
+        const cumCnt = data[k + "_cum_count"] || 0;
+        if (cumCnt === 0 && cumPct === 0) return '';
+        return `
+          <span class="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg bg-brand-card border border-brand-gold/30 text-xs">
+            <span class="w-2 h-2 rounded-full" style="background-color: ${COLORS[k]}"></span>
+            <span class="text-slate-300 font-semibold">${k}:</span>
+            <span class="font-bold text-brand-gold">${cumPct}%</span>
+            <span class="text-slate-500 text-[10px]">(${cumCnt})</span>
+          </span>
+        `;
+      }).filter(Boolean).join("");
+
+      const cumContainer = document.getElementById("hud-breakdown-cum");
+      if (cumContainer) {
+        cumContainer.innerHTML = cumPills || '<span class="text-slate-500 text-xs">Sin grabaciones acumuladas</span>';
+      }
+    }
+
+    function focusStreamYear(year) {
+      updateStreamHUD(year);
+      const songForYear = SONGS.find(s => s.year === year && s.is_milestone) || SONGS.find(s => s.year === year);
+      if (songForYear) selectSong(songForYear);
+      document.getElementById("streamgraph-section").scrollIntoView({ behavior: "smooth" });
+    }
+
+
+    // ----------------------------------------------------
+    // MILESTONE DATA FOR COMPACT LANDMARK BAR
+    // ----------------------------------------------------
+    const MILESTONES_MAP = {
+      1970: {
+        year: 1970,
+        country: 'JAMAICA',
+        color: '#E5A93C',
+        title: 'Wake The Town',
+        artist: '(U-Roy / Duke Reid)',
+        desc: '<strong class="text-[#E5A93C]">Nacimiento del Toasting / Deejaying:</strong> U-Roy improvisa rimas rítmicas sobre la pista instrumental en el sound system de Duke Reid, fijando la técnica vocal fundacional de toda la música urbana.'
+      },
+      1982: {
+        year: 1982,
+        country: 'JAMAICA',
+        color: '#E5A93C',
+        title: 'Bam Bam',
+        artist: '(Sister Nancy / Winston Riley)',
+        desc: '<strong class="text-[#E5A93C]">El Riddim más Versionado:</strong> Grabado sobre el instrumental Stalag 17 por Winston Riley, fijó la entonación lírica y el sampleo de cuernos más influyente en la historia del reguetón.'
+      },
+      1985: {
+        year: 1985,
+        country: 'JAMAICA',
+        color: '#E5A93C',
+        title: 'Under Mi Sleng Teng',
+        artist: '(Wayne Smith / King Jammy)',
+        desc: '<strong class="text-[#E5A93C]">La Revolución Digital:</strong> King Jammy utiliza el teclado portátil Casio MT-40, desmantelando los costosos ensambles acústicos e inaugurando la era de beats electrónicos en todo el Caribe.'
+      },
+      1987: {
+        year: 1987,
+        country: 'PANAMÁ',
+        color: '#E05A47',
+        title: 'La Chica de los Ojos Café',
+        artist: '(Renato / Pedsa Records)',
+        desc: '<strong class="text-[#E05A47]">Consolidación del Reggae en Español:</strong> Renato y Pedsa Records demostraron que la adaptación al castellano tenía viabilidad comercial masiva en América Latina, abriendo el puente panameño.'
+      },
+      1990: {
+        year: 1990,
+        country: 'JAMAICA',
+        color: '#E5A93C',
+        title: 'Dem Bow',
+        artist: '(Shabba Ranks / Bobby Digital)',
+        desc: '<strong class="text-[#E5A93C]">El ADN Rítmico del Reguetón:</strong> Bobby Digital Dixon y Steely & Clevie programan la batería sincopada en compás 3:2 (tresillo), matriz rítmica invariable del perreo.'
+      },
+      1992: {
+        year: 1992,
+        country: 'PUERTO RICO',
+        color: '#3B82F6',
+        title: "Playero 34: So' Persígueme",
+        artist: '(DJ Playero / Daddy Yankee)',
+        desc: '<strong class="text-[#3B82F6]">Nacimiento del Underground Boricua:</strong> DJ Playero formaliza el casete marquesina con el debut de Daddy Yankee, combinando dancehall y rap en San Juan.'
+      }
+    };
+
+    function selectMilestone(year) {
+      const ms = MILESTONES_MAP[year];
+      if (!ms) return;
+
+      // Update pills styles
+      document.querySelectorAll(".milestone-pill").forEach(p => {
+        p.className = "milestone-pill px-3 py-1.5 text-xs font-mono font-medium border border-neutral-800 text-neutral-400 hover:text-white hover:border-neutral-700 transition flex items-center space-x-2";
+      });
+      const activePill = document.getElementById(`pill-${year}`);
+      if (activePill) {
+        activePill.className = `milestone-pill px-3 py-1.5 text-xs font-mono font-bold border border-amber-500 bg-amber-500/10 text-amber-400 transition flex items-center space-x-2`;
+      }
+
+      // Update callout card
+      const badge = document.getElementById("ms-badge");
+      const title = document.getElementById("ms-title");
+      const artist = document.getElementById("ms-artist");
+      const desc = document.getElementById("ms-desc");
+
+      if (badge) {
+        badge.innerText = `${ms.year} • ${ms.country}`;
+        badge.style.color = ms.color;
+        badge.style.borderColor = `${ms.color}40`;
+        badge.style.backgroundColor = `${ms.color}15`;
+      }
+      if (title) title.childNodes[0].nodeValue = ms.title + " ";
+      if (artist) artist.innerText = ms.artist;
+      if (desc) desc.innerHTML = ms.desc;
+
+      // Focus in charts and HUD
+      focusStreamYear(year);
+    }
+
+        // 2. RENDER BUMP CHART WITH D3.JS
+    // ----------------------------------------------------
+    function renderBumpChart() {
+      const container = d3.select("#bump-chart");
+      container.html(""); // Clear
+
+      const width = container.node().getBoundingClientRect().width || 920;
+      const height = 400;
+      const margin = { top: 40, right: 140, bottom: 45, left: 125 };
+
+      const svg = container.append("svg")
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("class", "w-full overflow-visible");
+
+      const periods = ["1970-1974", "1975-1979", "1980-1984", "1985-1989", "1990-1994", "1995-1999"];
+
+      const x = d3.scalePoint()
+        .domain(periods)
+        .range([margin.left, width - margin.right]);
+
+      const y = d3.scaleLinear()
+        .domain([1, 6])
+        .range([margin.top, height - margin.bottom]);
+
+      const tooltip = d3.select("#bump-tooltip");
+
+      // Draw background lines for ranks 1 to 6
+      for (let r = 1; r <= 6; r++) {
+        svg.append("line")
+          .attr("x1", margin.left - 20)
+          .attr("x2", width - margin.right + 20)
+          .attr("y1", y(r))
+          .attr("y2", y(r))
+          .attr("stroke", r === 6 ? "#1A2030" : "#141824")
+          .attr("stroke-width", 1)
+          .attr("stroke-dasharray", r === 6 ? "3,3" : "none");
+
+        svg.append("text")
+          .attr("x", margin.left - 28)
+          .attr("y", y(r) + 4)
+          .attr("text-anchor", "end")
+          .attr("class", "text-[11px] font-mono fill-slate-500 font-bold")
+          .text(r === 6 ? '#6 (0 prod.)' : `#${r}`);
+      }
+
+      // Group by country
+      const countries = ['Jamaica', 'Puerto Rico', 'Panamá', 'Reino Unido', 'Estados Unidos'];
+
+      // Function to calculate horizontal offset for tied points at rank 6
+      function getXOffset(d) {
+        if (d.rank !== 6) return 0;
+        if (d.period === "1970-1974") {
+          return d.country === 'Puerto Rico' ? -14 : 14;
+        }
+        if (d.period === "1985-1989") {
+          return d.country === 'Reino Unido' ? -14 : 14;
+        }
+        return 0;
+      }
+
+      countries.forEach(country => {
+        const countryPoints = BUMP.filter(b => b.country === country);
+        const col = COLORS[country];
+
+        // Draw bezier line
+        const lineGen = d3.line()
+          .curve(d3.curveMonotoneX)
+          .x(d => x(d.period) + getXOffset(d))
+          .y(d => y(d.rank));
+
+        const path = svg.append("path")
+          .datum(countryPoints)
+          .attr("class", `bump-line bump-${country.replace(/\s+/g, '')} transition-all duration-300`)
+          .attr("d", lineGen)
+          .attr("fill", "none")
+          .attr("stroke", col)
+          .attr("stroke-width", 4.5)
+          .attr("stroke-linecap", "round");
+
+        // Draw point groups (circle + rank label + percentage pill)
+        const pts = svg.selectAll(`.pt-grp-${country.replace(/\s+/g, '')}`)
+          .data(countryPoints)
+          .join("g")
+          .attr("class", `cursor-pointer hover:opacity-100 transition-opacity`)
+          .attr("transform", d => `translate(${x(d.period) + getXOffset(d)}, ${y(d.rank)})`)
+          .on("mousemove", function(event, d) {
+            tooltip.style("left", (event.pageX + 15) + "px")
+                   .style("top", (event.pageY - 35) + "px")
+                   .classed("hidden", false)
+                   .html(`
+                      <div class="font-bold text-white mb-1">${d.country} • ${d.period}</div>
+                      <div class="text-slate-300">Puesto: <span class="font-bold text-white">#${d.rank}</span></div>
+                      <div class="text-slate-300">Cuota: <span class="font-bold" style="color:${col}">${d.percentage}%</span> (${d.count} temas)</div>
+                   `);
+          })
+          .on("mouseleave", () => tooltip.classed("hidden", true));
+
+        // Node Circle
+        pts.append("circle")
+          .attr("r", 12)
+          .attr("fill", col)
+          .attr("stroke", "#0A0C10")
+          .attr("stroke-width", 2.5)
+          .attr("class", "hover:scale-125 transition-transform");
+
+        // Rank text inside circle
+        pts.append("text")
+          .attr("y", 3.5)
+          .attr("text-anchor", "middle")
+          .attr("class", "text-[10px] font-mono font-bold fill-white pointer-events-none")
+          .text(d => d.rank);
+
+        // Percentage Pill above
+        pts.each(function(d) {
+          const g = d3.select(this);
+          const pillY = -23; // above circle
+          const pctStr = d.count > 0 ? `${d.percentage}%` : '0%';
+          const pillW = pctStr.length > 4 ? 44 : 36;
+
+          g.append("rect")
+            .attr("x", -pillW / 2)
+            .attr("y", pillY - 7)
+            .attr("width", pillW)
+            .attr("height", 14)
+            .attr("rx", 5)
+            .attr("fill", "#0B0D12")
+            .attr("stroke", d.count > 0 ? col : "#334155")
+            .attr("stroke-width", 1.2)
+            .attr("class", "pointer-events-none");
+
+          g.append("text")
+            .attr("y", pillY + 3.5)
+            .attr("text-anchor", "middle")
+            .attr("class", "text-[9px] font-mono font-bold pointer-events-none")
+            .attr("fill", d.count > 0 ? col : "#94A3B8")
+            .text(pctStr);
+        });
+
+        // End Label on right
+        const lastPt = countryPoints[countryPoints.length - 1];
+        if (lastPt) {
+          svg.append("text")
+            .attr("x", x(lastPt.period) + getXOffset(lastPt) + 18)
+            .attr("y", y(lastPt.rank) + 4)
+            .attr("class", "text-xs font-mono font-bold")
+            .attr("fill", col)
+            .text(country);
+        }
+      });
+
+      // X-Axis
+      svg.append("g")
+        .attr("transform", `translate(0, ${height - margin.bottom + 15})`)
+        .call(d3.axisBottom(x))
+        .attr("class", "text-slate-400 text-xs font-mono")
+        .call(g => g.select(".domain").remove())
+        .call(g => g.selectAll(".tick line").remove());
+    }
+
+    // ----------------------------------------------------
+    // 3. RENDER BEESWARM WITH D3 FORCE SIMULATION
+    // ----------------------------------------------------
+    let currentFilter = 'All';
+    let simulation = null;
+
+    function renderBeeswarm() {
+      const container = d3.select("#beeswarm-chart");
+      container.html(""); // Clear
+
+      const width = container.node().getBoundingClientRect().width || 600;
+      const height = 440;
+      const margin = { top: 30, right: 30, bottom: 40, left: 30 };
+
+      const svg = container.append("svg")
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("class", "w-full overflow-visible");
+
+      // Filter dataset
+      let filteredData = SONGS;
+      if (currentFilter === 'Milestone') {
+        filteredData = SONGS.filter(s => s.is_milestone);
+      } else if (currentFilter !== 'All') {
+        filteredData = SONGS.filter(s => s.country === currentFilter);
+      }
+
+      const x = d3.scaleLinear()
+        .domain([1969, 2000])
+        .range([margin.left, width - margin.right]);
+
+      // X Axis
+      svg.append("g")
+        .attr("transform", `translate(0, ${height - margin.bottom})`)
+        .call(d3.axisBottom(x).ticks(8).tickFormat(d3.format("d")))
+        .attr("class", "text-slate-400 text-xs font-mono")
+        .call(g => g.select(".domain").attr("stroke", "#1F2433"));
+
+      // Force simulation
+      if (simulation) simulation.stop();
+
+      const nodes = filteredData.map(d => ({
+        ...d,
+        radius: d.is_milestone ? 10 : 6.5,
+        targetX: x(d.year)
+      }));
+
+      simulation = d3.forceSimulation(nodes)
+        .force("x", d3.forceX(d => d.targetX).strength(1.2))
+        .force("y", d3.forceY(height / 2 - 15).strength(0.12))
+        .force("collide", d3.forceCollide(d => d.radius + 2))
+        .stop();
+
+      for (let i = 0; i < 120; ++i) simulation.tick();
+
+      // Node groups
+      const node = svg.selectAll(".song-node")
+        .data(nodes)
+        .join("g")
+        .attr("class", "song-node cursor-pointer")
+        .attr("transform", d => `translate(${d.x}, ${d.y})`)
+        .on("click", (event, d) => selectSong(d));
+
+      // Milestone pulse halo
+      node.filter(d => d.is_milestone)
+        .append("circle")
+        .attr("r", 15)
+        .attr("fill", "#E5A93C")
+        .attr("opacity", 0.25)
+        .attr("class", "animate-pulse");
+
+      // Main circle
+      node.append("circle")
+        .attr("r", d => d.radius)
+        .attr("fill", d => COLORS[d.country] || '#94A3B8')
+        .attr("stroke", "#0A0C10")
+        .attr("stroke-width", 1.5)
+        .attr("class", "hover:scale-150 transition-transform");
+    }
+
+    function filterBeeswarm(category) {
+      currentFilter = category;
+      d3.selectAll(".filter-btn")
+        .classed("bg-neutral-100 text-black font-bold border-white", false)
+        .classed("text-neutral-400 border-neutral-800", true);
+      
+      const activeBtn = d3.selectAll(".filter-btn").filter(function() {
+        return this.getAttribute("onclick") && this.getAttribute("onclick").includes(`'${category}'`);
+      });
+      activeBtn.classed("bg-neutral-100 text-black font-bold border-white", true)
+               .classed("text-neutral-400 border-neutral-800", false);
+               
+      renderBeeswarm();
+    }
+
+    function selectSong(d) {
+      document.getElementById("card-title").innerText = d.title;
+      document.getElementById("card-year").innerText = d.year;
+      document.getElementById("card-producer").innerText = d.producer;
+      document.getElementById("card-label").innerText = d.label;
+      document.getElementById("card-country").innerText = d.country + " (" + d.nationality_raw + ")";
+      document.getElementById("card-rhythm").innerText = d.rhythm_style;
+      
+      const descEl = document.getElementById("card-desc");
+      if (d.milestone_text) {
+        descEl.innerText = d.milestone_text;
+        descEl.classList.remove("hidden");
+      } else {
+        descEl.innerText = `Grabación histórica producida en ${d.country} para ${d.label}.`;
+      }
+
+      const badge = document.getElementById("card-badge");
+      if (d.is_milestone) {
+        badge.innerText = "★ HITO FUNDACIONAL";
+        badge.className = "px-2.5 py-1 text-[10px] font-mono font-bold uppercase tracking-wider bg-amber-500/10 text-amber-400 border border-amber-500/30";
+      } else {
+        badge.innerText = "REGISTRO ARCHIVO";
+        badge.className = "px-2.5 py-1 text-[10px] font-mono font-medium uppercase tracking-wider bg-neutral-900 text-neutral-400 border border-neutral-800";
+      }
+
+      // Update Spotify search link
+      const spotifyBtn = document.getElementById("card-spotify-btn");
+      spotifyBtn.href = `https://open.spotify.com/search/${encodeURIComponent(d.title + ' ' + d.producer)}`;
+
+      // Set current selected for audio synth
+      window.currentSong = d;
+    }
+
+    // ----------------------------------------------------
+    // 4. PROCEDURAL WEB AUDIO SYNTHESIZER (RHYTHM ENGINE)
+    // ----------------------------------------------------
+    let audioCtx = null;
+    let isPlaying = false;
+    let timerId = null;
+
+    function toggleBeatPlayback() {
+      if (isPlaying) {
+        stopBeatPlayback();
+      } else {
+        startBeatPlayback();
+      }
+    }
+
+    function startBeatPlayback() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      isPlaying = true;
+      document.getElementById("play-btn-text").innerText = "Detener Beat";
+      document.getElementById("play-btn-icon").innerText = "■";
+      document.getElementById("play-beat-btn").classList.replace("bg-brand-gold", "bg-rose-500");
+      document.getElementById("play-beat-btn").classList.replace("text-black", "text-white");
+
+      const song = window.currentSong || SONGS[0];
+      let bpm = 94;
+      if (song.year < 1980) bpm = 74;
+      else if (song.year < 1985) bpm = 82;
+      else if (song.year < 1990) bpm = 90;
+      else bpm = 96;
+
+      const stepTime = (60 / bpm) / 4; // 16th notes
+      let step = 0;
+
+      timerId = setInterval(() => {
+        playSynthStep(step, song.year);
+        step = (step + 1) % 16;
+      }, stepTime * 1000);
+    }
+
+    function animateWaveformStep(step) {
+      const bars = document.querySelectorAll("#waveform-visualizer span");
+      if (!bars || !bars.length) return;
+      const patterns = [
+        [20, 8, 24, 10, 18],
+        [8, 22, 12, 24, 8],
+        [24, 14, 18, 6, 22],
+        [10, 24, 8, 20, 14]
+      ];
+      const p = patterns[step % patterns.length];
+      bars.forEach((b, i) => {
+        b.style.height = `${p[i]}px`;
+        b.style.opacity = '1';
+      });
+    }
+
+    function stopBeatPlayback() {
+      isPlaying = false;
+      if (timerId) clearInterval(timerId);
+      document.getElementById("play-btn-text").innerText = "Escuchar Beat Sintético";
+      document.getElementById("play-btn-icon").innerText = "▶";
+      document.getElementById("play-beat-btn").classList.replace("bg-rose-500", "bg-brand-gold");
+      document.getElementById("play-beat-btn").classList.replace("text-white", "text-black");
+
+      // Reset waveform bars to idle
+      const bars = document.querySelectorAll("#waveform-visualizer span");
+      if (bars) {
+        const idleHeights = [8, 16, 24, 12, 20];
+        bars.forEach((b, i) => {
+          b.style.height = `${idleHeights[i]}px`;
+          b.style.opacity = '0.5';
+        });
+      }
+    }
+
+    function playSynthStep(step, year) {
+      const now = audioCtx.currentTime;
+
+      // DEM BOW / TONGUE PATTERN (1989-1999)
+      // Kick: 0, 4, 8, 12 (4-on-the-floor)
+      // Snare (Dembow syncopation): 3, 6, 11, 14
+      if (year >= 1989) {
+        if (step % 4 === 0) playKick(now);
+        if (step === 3 || step === 6 || step === 11 || step === 14) playSnare(now);
+      } 
+      // ROOTS & RUB-A-DUB (One-Drop)
+      else {
+        if (step === 8) { playKick(now); playSnare(now); }
+        if (step % 2 === 0) playHiHat(now);
+      }
+
+      // Dynamic Waveform Visualizer Reaction (Agente 1 & 2)
+      animateWaveformStep(step);
+    }
+
+    function playKick(time) {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.frequency.setValueAtTime(140, time);
+      osc.frequency.exponentialRampToValueAtTime(36, time + 0.12);
+      gain.gain.setValueAtTime(0.9, time);
+      gain.gain.exponentialRampToValueAtTime(0.001, time + 0.15);
+      osc.start(time);
+      osc.stop(time + 0.15);
+    }
+
+    function playSnare(time) {
+      const bufferSize = audioCtx.sampleRate * 0.1;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'highpass';
+      filter.frequency.value = 900;
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.6, time);
+      gain.gain.exponentialRampToValueAtTime(0.01, time + 0.1);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start(time);
+      noise.stop(time + 0.1);
+    }
+
+    function playHiHat(time) {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(6000, time);
+      gain.gain.setValueAtTime(0.12, time);
+      gain.gain.exponentialRampToValueAtTime(0.001, time + 0.04);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(time);
+      osc.stop(time + 0.04);
+    }
+
+    // ----------------------------------------------------
+    // INITIALIZATION
+    // ----------------------------------------------------
+    window.addEventListener("DOMContentLoaded", () => {
+      renderStreamgraph();
+      renderBumpChart();
+      renderBeeswarm();
+      
+      // Initialize HUD at 1985
+      updateStreamHUD(1985);
+
+      // Auto select Dem Bow
+      const demBow = SONGS.find(s => s.title === "Dem Bow") || SONGS[0];
+      selectSong(demBow);
+
+      // Handle window resize
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          renderStreamgraph();
+          renderBumpChart();
+          renderBeeswarm();
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>

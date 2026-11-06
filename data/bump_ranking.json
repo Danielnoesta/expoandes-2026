@@ -1,0 +1,326 @@
+[
+  {
+    "period": "1970-1974",
+    "start_year": 1970,
+    "end_year": 1974,
+    "country": "Jamaica",
+    "count": 9,
+    "percentage": 75.0,
+    "rank": 1
+  },
+  {
+    "period": "1970-1974",
+    "start_year": 1970,
+    "end_year": 1974,
+    "country": "Reino Unido",
+    "count": 2,
+    "percentage": 16.7,
+    "rank": 2
+  },
+  {
+    "period": "1970-1974",
+    "start_year": 1970,
+    "end_year": 1974,
+    "country": "Estados Unidos",
+    "count": 1,
+    "percentage": 8.3,
+    "rank": 3
+  },
+  {
+    "period": "1970-1974",
+    "start_year": 1970,
+    "end_year": 1974,
+    "country": "Puerto Rico",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1970-1974",
+    "start_year": 1970,
+    "end_year": 1974,
+    "country": "Panamá",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1970-1974",
+    "start_year": 1970,
+    "end_year": 1974,
+    "country": "Otros",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1975-1979",
+    "start_year": 1975,
+    "end_year": 1979,
+    "country": "Jamaica",
+    "count": 7,
+    "percentage": 58.3,
+    "rank": 1
+  },
+  {
+    "period": "1975-1979",
+    "start_year": 1975,
+    "end_year": 1979,
+    "country": "Reino Unido",
+    "count": 2,
+    "percentage": 16.7,
+    "rank": 2
+  },
+  {
+    "period": "1975-1979",
+    "start_year": 1975,
+    "end_year": 1979,
+    "country": "Panamá",
+    "count": 1,
+    "percentage": 8.3,
+    "rank": 3
+  },
+  {
+    "period": "1975-1979",
+    "start_year": 1975,
+    "end_year": 1979,
+    "country": "Estados Unidos",
+    "count": 1,
+    "percentage": 8.3,
+    "rank": 4
+  },
+  {
+    "period": "1975-1979",
+    "start_year": 1975,
+    "end_year": 1979,
+    "country": "Otros",
+    "count": 1,
+    "percentage": 8.3,
+    "rank": 5
+  },
+  {
+    "period": "1975-1979",
+    "start_year": 1975,
+    "end_year": 1979,
+    "country": "Puerto Rico",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1980-1984",
+    "start_year": 1980,
+    "end_year": 1984,
+    "country": "Jamaica",
+    "count": 19,
+    "percentage": 79.2,
+    "rank": 1
+  },
+  {
+    "period": "1980-1984",
+    "start_year": 1980,
+    "end_year": 1984,
+    "country": "Estados Unidos",
+    "count": 2,
+    "percentage": 8.3,
+    "rank": 2
+  },
+  {
+    "period": "1980-1984",
+    "start_year": 1980,
+    "end_year": 1984,
+    "country": "Puerto Rico",
+    "count": 1,
+    "percentage": 4.2,
+    "rank": 3
+  },
+  {
+    "period": "1980-1984",
+    "start_year": 1980,
+    "end_year": 1984,
+    "country": "Panamá",
+    "count": 1,
+    "percentage": 4.2,
+    "rank": 4
+  },
+  {
+    "period": "1980-1984",
+    "start_year": 1980,
+    "end_year": 1984,
+    "country": "Otros",
+    "count": 1,
+    "percentage": 4.2,
+    "rank": 5
+  },
+  {
+    "period": "1980-1984",
+    "start_year": 1980,
+    "end_year": 1984,
+    "country": "Reino Unido",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1985-1989",
+    "start_year": 1985,
+    "end_year": 1989,
+    "country": "Panamá",
+    "count": 8,
+    "percentage": 38.1,
+    "rank": 1
+  },
+  {
+    "period": "1985-1989",
+    "start_year": 1985,
+    "end_year": 1989,
+    "country": "Jamaica",
+    "count": 7,
+    "percentage": 33.3,
+    "rank": 2
+  },
+  {
+    "period": "1985-1989",
+    "start_year": 1985,
+    "end_year": 1989,
+    "country": "Puerto Rico",
+    "count": 5,
+    "percentage": 23.8,
+    "rank": 3
+  },
+  {
+    "period": "1985-1989",
+    "start_year": 1985,
+    "end_year": 1989,
+    "country": "Otros",
+    "count": 1,
+    "percentage": 4.8,
+    "rank": 4
+  },
+  {
+    "period": "1985-1989",
+    "start_year": 1985,
+    "end_year": 1989,
+    "country": "Reino Unido",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1985-1989",
+    "start_year": 1985,
+    "end_year": 1989,
+    "country": "Estados Unidos",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1990-1994",
+    "start_year": 1990,
+    "end_year": 1994,
+    "country": "Puerto Rico",
+    "count": 12,
+    "percentage": 40.0,
+    "rank": 1
+  },
+  {
+    "period": "1990-1994",
+    "start_year": 1990,
+    "end_year": 1994,
+    "country": "Jamaica",
+    "count": 9,
+    "percentage": 30.0,
+    "rank": 2
+  },
+  {
+    "period": "1990-1994",
+    "start_year": 1990,
+    "end_year": 1994,
+    "country": "Panamá",
+    "count": 7,
+    "percentage": 23.3,
+    "rank": 3
+  },
+  {
+    "period": "1990-1994",
+    "start_year": 1990,
+    "end_year": 1994,
+    "country": "Estados Unidos",
+    "count": 2,
+    "percentage": 6.7,
+    "rank": 4
+  },
+  {
+    "period": "1990-1994",
+    "start_year": 1990,
+    "end_year": 1994,
+    "country": "Reino Unido",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1990-1994",
+    "start_year": 1990,
+    "end_year": 1994,
+    "country": "Otros",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1995-1999",
+    "start_year": 1995,
+    "end_year": 1999,
+    "country": "Puerto Rico",
+    "count": 21,
+    "percentage": 77.8,
+    "rank": 1
+  },
+  {
+    "period": "1995-1999",
+    "start_year": 1995,
+    "end_year": 1999,
+    "country": "Jamaica",
+    "count": 3,
+    "percentage": 11.1,
+    "rank": 2
+  },
+  {
+    "period": "1995-1999",
+    "start_year": 1995,
+    "end_year": 1999,
+    "country": "Panamá",
+    "count": 2,
+    "percentage": 7.4,
+    "rank": 3
+  },
+  {
+    "period": "1995-1999",
+    "start_year": 1995,
+    "end_year": 1999,
+    "country": "Estados Unidos",
+    "count": 1,
+    "percentage": 3.7,
+    "rank": 4
+  },
+  {
+    "period": "1995-1999",
+    "start_year": 1995,
+    "end_year": 1999,
+    "country": "Reino Unido",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  },
+  {
+    "period": "1995-1999",
+    "start_year": 1995,
+    "end_year": 1999,
+    "country": "Otros",
+    "count": 0,
+    "percentage": 0.0,
+    "rank": 6
+  }
+]
