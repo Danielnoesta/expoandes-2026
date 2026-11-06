@@ -2,6 +2,8 @@
 > **Universidad de los Andes · ExpoAndes 2026 · Grupo 6**  
 > *Investigación Etnomusicológica y Computacional sobre la evolución de la cuota de producción por país en tres décadas formativas.*
 
+🌐 **Sitio Web Accesible en Producción:** [https://expoandes-gamma.vercel.app](https://expoandes-gamma.vercel.app)
+
 ---
 
 ## 🎯 Pregunta Central de Investigación
