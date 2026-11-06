@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth bg-[#08090C]">
+<html lang="es" class="scroll-smooth bg-[#08090C] overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,18 +71,20 @@
   <!-- TOP EDITORIAL HEADER & COLOPHON -->
   <header class="border-b border-neutral-800 bg-[#08090C]/95 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between text-xs font-mono">
-      <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-2 sm:space-x-3">
         <span class="text-neutral-500 font-bold">EXPOANDES · 2026</span>
-        <span class="text-neutral-700">/</span>
+        <span class="text-neutral-700 hidden sm:inline">/</span>
         <span class="text-neutral-300 font-medium hidden md:inline">INVESTIGACIÓN ETNOMUSICOLÓGICA (1970–1999)</span>
       </div>
       
-      <nav class="flex items-center space-x-5">
-        <a href="#streamgraph-section" class="text-neutral-400 hover:text-white transition">01. Cuotas</a>
-        <a href="#bump-section" class="text-neutral-400 hover:text-white transition">02. Jerarquías</a>
-        <a href="#beeswarm-section" class="text-neutral-400 hover:text-white transition">03. Archivo 126</a>
-        <span class="text-neutral-700">/</span>
-        <span class="px-2.5 py-1 text-black bg-amber-400 font-bold flex items-center space-x-1 cursor-default">
+      <nav class="flex items-center space-x-2 sm:space-x-5">
+        <div class="hidden sm:flex items-center space-x-3 sm:space-x-5">
+          <a href="#streamgraph-section" class="text-neutral-400 hover:text-white transition">01. Cuotas</a>
+          <a href="#bump-section" class="text-neutral-400 hover:text-white transition">02. Jerarquías</a>
+          <a href="#beeswarm-section" class="text-neutral-400 hover:text-white transition">03. Archivo 126</a>
+          <span class="text-neutral-700">/</span>
+        </div>
+        <span class="px-2 sm:px-2.5 py-1 text-black bg-amber-400 font-bold flex items-center space-x-1 cursor-default text-[10px] sm:text-xs">
           <span>EXPOANDES 2026</span>
         </span>
       </nav>
@@ -176,7 +178,7 @@
         <div class="flex items-center space-x-2 font-mono text-xs text-amber-500 font-bold uppercase tracking-wider">
           <span>01 / DINÁMICA TEMPORAL</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white tracking-tight">
+        <h2 class="text-2xl sm:text-4xl font-syne font-bold text-white tracking-tight">
           Evolución de la Cuota de Participación Temporal
         </h2>
         <p class="text-neutral-400 text-xs sm:text-sm leading-relaxed">
@@ -187,15 +189,15 @@
       <!-- Controls: Toggle & Minimal Legend -->
       <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
         <!-- Display Mode Toggle -->
-        <div class="flex items-center border border-neutral-800 bg-[#0B0D12] p-1">
-          <button id="mode-pct-btn" onclick="setStreamMode('pct')" class="px-3.5 py-1.5 text-xs font-mono font-bold bg-neutral-100 text-black border border-neutral-100 transition">
+        <div class="grid grid-cols-3 sm:flex items-center border border-neutral-800 bg-[#0B0D12] p-1 w-full sm:w-auto text-center">
+          <button id="mode-pct-btn" onclick="setStreamMode('pct')" class="px-2 sm:px-3.5 py-1.5 text-[10.5px] sm:text-xs font-mono font-bold bg-neutral-100 text-black border border-neutral-100 transition">
             % Flujo Anual
           </button>
-          <button id="mode-cum-btn" onclick="setStreamMode('cum')" class="px-3.5 py-1.5 text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition">
-            % Acumulado Histórico
+          <button id="mode-cum-btn" onclick="setStreamMode('cum')" class="px-2 sm:px-3.5 py-1.5 text-[10.5px] sm:text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition">
+            % Acumulado
           </button>
-          <button id="mode-count-btn" onclick="setStreamMode('count')" class="px-3.5 py-1.5 text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition">
-            Volumen (Barras)
+          <button id="mode-count-btn" onclick="setStreamMode('count')" class="px-2 sm:px-3.5 py-1.5 text-[10.5px] sm:text-xs font-mono font-medium text-neutral-400 hover:text-white border border-transparent transition">
+            Volumen
           </button>
         </div>
 
@@ -330,7 +332,7 @@
   <section id="bump-section" class="border-b border-neutral-800 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="mb-8 space-y-2">
       <span class="text-[11px] font-mono font-bold text-[#3B82F6] uppercase tracking-wider block">02 / JERARQUÍAS</span>
-      <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white tracking-tight">
+      <h2 class="text-2xl sm:text-4xl font-syne font-bold text-white tracking-tight">
         Dinámica de Jerarquías: Bump Chart (1970–1999)
       </h2>
       <p class="text-neutral-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
@@ -339,8 +341,17 @@
     </div>
 
     <div class="border border-neutral-800 bg-[#0B0D12] p-4 sm:p-6 relative">
+      <div class="sm:hidden flex items-center justify-between text-[11px] font-mono text-amber-400 bg-amber-400/5 border border-amber-400/20 px-3 py-1.5 mb-3">
+        <span class="flex items-center space-x-1.5">
+          <span class="animate-pulse">⇄</span>
+          <span>Desliza para ver los 6 quinquenios</span>
+        </span>
+        <span class="text-[10px] text-neutral-400">Puestos #1 al #6</span>
+      </div>
       <div id="bump-tooltip" class="absolute hidden z-20 pointer-events-none bg-[#08090C] border border-neutral-700 p-3 text-xs font-mono shadow-2xl"></div>
-      <div id="bump-chart" class="w-full overflow-x-auto"></div>
+      <div class="overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div id="bump-chart" class="min-w-[700px] sm:min-w-0"></div>
+      </div>
       
       <!-- BUMP CHART METHODOLOGICAL FOOTNOTE -->
       <div class="mt-4 pt-3 border-t border-neutral-800 text-[11px] text-neutral-400 font-mono">
@@ -360,7 +371,7 @@
       <div class="space-y-2">
         <span class="text-[11px] font-mono font-bold text-[#E05A47] uppercase tracking-wider block">03 / CORPUS DE 126 GRABACIONES</span>
         <div class="flex flex-wrap items-center gap-3">
-          <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white tracking-tight">
+          <h2 class="text-2xl sm:text-4xl font-syne font-bold text-white tracking-tight">
             The Sound Machine: Archivo Acústico
           </h2>
           <span class="inline-flex items-center px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-amber-500/10 text-amber-400 border border-amber-500/30">
@@ -409,7 +420,7 @@
           <div class="space-y-2 text-xs font-mono">
             <div class="flex justify-between py-1 border-b border-neutral-850">
               <span class="text-neutral-500 uppercase">Productor:</span>
-              <span id="card-producer" class="font-bold text-white text-right">Bobby Digital Dixon</span>
+              <span id="card-producer" class="font-bold text-white text-right break-words max-w-[200px]">Bobby Digital Dixon</span>
             </div>
             <div class="flex justify-between py-1 border-b border-neutral-850">
               <span class="text-neutral-500 uppercase">Sello:</span>
@@ -421,7 +432,7 @@
             </div>
             <div class="flex justify-between py-1 border-b border-neutral-850">
               <span class="text-neutral-500 uppercase">Compás:</span>
-              <span id="card-rhythm" class="text-amber-400 text-right font-bold">Compás Dem Bow 3:2 (96 BPM)</span>
+              <span id="card-rhythm" class="text-amber-400 text-right font-bold break-words max-w-[200px]">Compás Dem Bow 3:2 (96 BPM)</span>
             </div>
           </div>
 
@@ -631,9 +642,12 @@
             tooltip.classed("hidden", true);
           });
 
-        // X-Axis (Every 5 years + 1970 + 1999)
+        // X-Axis (Adaptive tick density on mobile)
+        const tickFilter = width < 500
+          ? (y => y === 1970 || y === 1980 || y === 1990 || y === 1999)
+          : (y => y % 5 === 0 || y === 1970 || y === 1999);
         const xAxis = d3.axisBottom(xBand)
-          .tickValues(TIMELINE.map(d => d.year).filter(y => y % 5 === 0 || y === 1970 || y === 1999));
+          .tickValues(TIMELINE.map(d => d.year).filter(tickFilter));
 
         svg.append("g")
           .attr("transform", `translate(0, ${height - margin.bottom})`)
@@ -757,7 +771,7 @@
 
         // X-Axis
         const xAxis = d3.axisBottom(x)
-          .ticks(10)
+          .ticks(width < 500 ? 5 : 10)
           .tickFormat(d3.format("d"));
 
         svg.append("g")
@@ -969,7 +983,8 @@
       const container = d3.select("#bump-chart");
       container.html(""); // Clear
 
-      const width = container.node().getBoundingClientRect().width || 920;
+      const containerW = container.node().getBoundingClientRect().width;
+      const width = Math.max(containerW || 920, 700);
       const height = 400;
       const margin = { top: 40, right: 140, bottom: 45, left: 125 };
 
